@@ -1,4 +1,4 @@
-
+(Đặt tên file đuôi .html)
 <!DOCTYPE html>
 <html>
     //Khai bao the thong tin ko show len website
@@ -35,6 +35,7 @@
 
 <h1></h1>:Phẩn từ xác định tiêu đề lớn
 <p></p>:__________________đoạn văn bản
+<pre></pre>: Giu nguyên chữ đc viết kể cả dấu cách hay xuống dòng
 <meta> tên thẻ khai báo thông tin
 
 <meta charset="UTF-8"> xác định bộ kí tự đc sdung,utf-8 hỗ trợ hiển thị tiếng việt
@@ -54,3 +55,45 @@
 <del></del> (deleted - đã xóa): Văn bản đã xóa
 <mark></mark> (marked - đánh dấu): Văn bản được đánh dấu
 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keyword"content="HTML, CSS. JAVASCRIPT">
+        <meta name="description" content="Đây là khóa học front-end">
+        <meta name=""author" conten="Bang">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Bài tập buổi 1</title>
+    </head>
+    <body>
+        <h1>Viết dòng này bằng h1</h1>
+        <h2>Viết dòng này bằng h2</h2>
+        <h3>Viết dòng này bằng h3</h3>
+        <br>
+        <h4>Viết dòng này bằng h4</h4>
+        <h5>Viết dòng này bằng h5</h5>
+        <h6>Viết dòng này bằng h6</h6>
+        <hr>
+        <p>Viết dòng này bằng p</p>
+        <hr>
+        <pre>Viết đoạn này bằng thẻ pre
+        </pre>
+        <hr>
+        <p><b>Dùng thẻ b in đậm</b></p>
+        <strong>Dùng thẻ strong</strong>
+        <i>viết nghiêng</i>
+        <em>viết nghiêng quan trọng</em>
+        <small>chữ nhỏ</small>
+        <p>Đang viêt bình thường <sub>dùng sub viết chữ nhỏ</sub>
+        <br>
+        Đang viêt bình thường <sup>dùng sup viết chữ nhỏ</sup>
+        <br>
+        <ins>Dùng ins văn bản được chèn</ins>
+        
+        </p>
+        <del>dùng del văn bản được xóa</del>
+        <br>
+        <mark>văn bản được đánh dấu</mark>
+    </body>
+</html>
