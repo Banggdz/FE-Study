@@ -1,0 +1,21 @@
+<!DOCTYPE html>: DOCTYPE:kiểu tài liệu
+<html></html>:Cặp thẻ bắt buộc,element cấp cao nhất,đóng gói tất cả nội dung của trang html
+<head></head>Khai báo thông tin meta của trang web như:tiêu đề trang,charset
+<title></title>:Cặp thẻ nằm trong <head>,dùng khai báo tiêu đề trang
+<body></body>:Cặp thẻ dùng để đóng gói tất cả các nội dung hiển thị trên trang
+
+<h1></h1>:Phẩn từ xác định tiêu đề lớn
+<p></p>:__________________đoạn văn bản
+
+<!DOCTYPE html>
+<html>
+    //Khai bao the thong tin ko show len website
+    <head>
+        <title>Tiêu đề trên tab</title>
+    </head>
+    //noi dung trang web
+    <body>
+        <h1>Nội dung</h1>
+        <p>Đoạn văn bản</p>
+    </body>
+</html>
