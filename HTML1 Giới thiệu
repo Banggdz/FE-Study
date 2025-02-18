@@ -6,16 +6,48 @@
 
 <h1></h1>:Phẩn từ xác định tiêu đề lớn
 <p></p>:__________________đoạn văn bản
-
+<meta> tên thẻ khai báo thông tin
 <!DOCTYPE html>
 <html>
     //Khai bao the thong tin ko show len website
     <head>
+        <meta charset="UTF-8">
+        <meta name="keyword"content="HTML, CSS. JAVASCRIPT">
+        <meta name="description" content="Đây là khóa học front-end">
+        <meta name=""author" conten="Bang">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Tiêu đề trên tab</title>
     </head>
     //noi dung trang web
     <body>
         <h1>Nội dung</h1>
-        <p>Đoạn văn bản</p>
+        <h2>nội dung h2</h2>
+        <h3>Nội dung h3</h3>
+        <h4>nội dung h4</h4>
+        <h5>Nội dung h5</h5>
+        <hr> :ngăn 2 đoạn văn
+        <h6>nội dung h6</h6>
+        <p>Đoạn văn bản
+        Bàn thắng duy nhất của James Maddison đã giúp Tottenham thắng 1-0 trước Man Utd
+            <br> :xuống dòng
+        ở trận đấu thuộc vòng 25 Premier League diễn ra vào đêm 16/2."Quỷ đỏ" rơi xuống vị trí thứ 15 trên bảng xếp hạng.            
+</p>
     </body>
 </html>
+<meta charset="UTF-8"> xác định bộ kí tự đc sdung,utf-8 hỗ trợ hiển thị tiếng việt
+<meta name="keywords"content="HTML,CSS,JavaScript"> xd tự khóa cho công cụ tìm kiếm
+<meta name="description"content="Đây là khóa học front-end"> xd mô tả về trang web
+<meta name="author" content="Bang"> xd tác giả 1 trang
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<b></b> (bold - in đậm): Văn bản in đậm
+<strong></strong>: Văn bản in đậm và quan trọng
+<i></i> (italic - in nghiêng): Văn bản in nghiêng
+<em></em> (emphasized - nhấn mạnh): Văn bản in nghiêng và quan trọng
+<small></small>: Văn bản chữ nhỏ hơn
+<sub></sub> (subscripted - chỉ số dưới): Văn bản có chỉ số dưới
+<sup></sup> (superscripted - chỉ số trên): Văn bản có chỉ số trên
+<ins></ins> (inserted - chèn): Văn bản được chèn, có gạch chân bên dưới.
+<del></del> (deleted - đã xóa): Văn bản đã xóa
+<mark></mark> (marked - đánh dấu): Văn bản được đánh dấu
+
