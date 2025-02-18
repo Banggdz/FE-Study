@@ -1,12 +1,4 @@
-<!DOCTYPE html>: DOCTYPE:kiểu tài liệu
-<html></html>:Cặp thẻ bắt buộc,element cấp cao nhất,đóng gói tất cả nội dung của trang html
-<head></head>Khai báo thông tin meta của trang web như:tiêu đề trang,charset
-<title></title>:Cặp thẻ nằm trong <head>,dùng khai báo tiêu đề trang
-<body></body>:Cặp thẻ dùng để đóng gói tất cả các nội dung hiển thị trên trang
 
-<h1></h1>:Phẩn từ xác định tiêu đề lớn
-<p></p>:__________________đoạn văn bản
-<meta> tên thẻ khai báo thông tin
 <!DOCTYPE html>
 <html>
     //Khai bao the thong tin ko show len website
@@ -34,6 +26,17 @@
 </p>
     </body>
 </html>
+
+<!DOCTYPE html>: DOCTYPE:kiểu tài liệu
+<html></html>:Cặp thẻ bắt buộc,element cấp cao nhất,đóng gói tất cả nội dung của trang html
+<head></head>Khai báo thông tin meta của trang web như:tiêu đề trang,charset
+<title></title>:Cặp thẻ nằm trong <head>,dùng khai báo tiêu đề trang
+<body></body>:Cặp thẻ dùng để đóng gói tất cả các nội dung hiển thị trên trang
+
+<h1></h1>:Phẩn từ xác định tiêu đề lớn
+<p></p>:__________________đoạn văn bản
+<meta> tên thẻ khai báo thông tin
+
 <meta charset="UTF-8"> xác định bộ kí tự đc sdung,utf-8 hỗ trợ hiển thị tiếng việt
 <meta name="keywords"content="HTML,CSS,JavaScript"> xd tự khóa cho công cụ tìm kiếm
 <meta name="description"content="Đây là khóa học front-end"> xd mô tả về trang web
