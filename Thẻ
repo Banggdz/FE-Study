@@ -61,3 +61,13 @@ type="i": Các mục trong danh sách sẽ được đánh dưới dạng số L
     <h1 class="color-red">Nd the h1</h1>
     <p class="color-red">ND the p</p>
     <p class="color-red font-big">ND the p</p>
+<style>
+    .test-class{
+        color:pink;
+    }
+    #test-id{
+        color:red;
+    }
+</style>
+    <div class="test-class">Viết đoạn văn sử dụng thẻ </div>
+    <div id="test-id">Thẻ id</div>
