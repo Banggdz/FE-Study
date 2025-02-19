@@ -23,3 +23,8 @@
     <footer class="footer">
         Footer
     </footer>
+
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+        <input name="Họ tên">
+        <input type="submit" value="Gửi">
+    </form>
