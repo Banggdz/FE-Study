@@ -63,4 +63,23 @@ POST không có giới hạn về kích thước và có thể được sử d�
         <input name="Ngày về" type="date">
         <input name="THgian về" type="time">
         <input name="chọn tệp" type="file">
+//Chọn nhiều đáp án
+<input type="checkbox"id="C" name="language" value="c">
+        <label for="C">Ngôn ngữ C</label><br>
+        <input type="checkbox"id="java" name="language" value="j">
+        <label for="java">Ngôn ngữ Java</label><br>
+        <input type="checkbox"id="php" name="language" value="php">
+        <label for="php">Ngôn ngữ Php</label><br><br>
+//Chọn 1 đáp án
+<input type="radio"id="java" name="language" value="j">
+ <input type="range" name="volume" min="0"max="100"step="5">
+<input type="color" name="color">
+//Gía trị ban đầu của ô input
+ <input type="text" name="ho_ten"value="Nguyễn">
+
+//required:bắt buộc nhập   placeholder:Chữ gợi ý trong khung input
+ <input type="text" name="ho_ten"maxlength=10 placeholder="Họ tên" required> 
+        <input type="text" name="cccd"value="0123456789"readonly>
+        <input type="email" name="email"value="vna@gmail"disabled>
+        <input type="number"name="so_luong"min="1"max="5">
 <button>Gửi</button>
