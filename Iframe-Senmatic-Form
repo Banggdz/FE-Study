@@ -82,4 +82,7 @@ POST không có giới hạn về kích thước và có thể được sử d�
         <input type="text" name="cccd"value="0123456789"readonly>
         <input type="email" name="email"value="vna@gmail"disabled>
         <input type="number"name="so_luong"min="1"max="5">
+//input textarea
+<label for="gt">Giới thiệu bản thân</label>
+        <textarea id="gt"name="Giới thiệu bản thân"></textarea><br>
 <button>Gửi</button>
