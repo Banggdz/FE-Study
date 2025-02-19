@@ -1,0 +1,25 @@
+<div>thẻ ko có ý nghĩa dùng khi ko biết cho vào thẻ nào
+<iframe src="https://www.toomva.com/tudien/tratu?w=we" name="vd"width="1000"height="1000"></iframe>
+    <a href="https://code.ptit.edu.vn/student/question"target="vd">Nút</a>
+<h2>Ko có Semantic</h2>
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="content">
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+
+<header class="header">header</header>
+    <nav class="sidebar">sidebar</nav>
+    <main class="content">
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+    </,>
+    <footer class="footer">
+        Footer
+    </footer>
