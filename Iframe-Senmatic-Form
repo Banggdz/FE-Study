@@ -1,4 +1,25 @@
-<div>thẻ ko có ý nghĩa dùng khi ko biết cho vào thẻ nào
+<div>thẻ ko có ý nghĩa,dùng khi ko biết cho vào thẻ nào
+<article>: Xác định nội dung độc lập, khép kín
+<aside>: Xác định nội dung ngoài nội dung trang
+<details>: Xác định các chi tiết bổ sung mà người dùng có thể xem hoặc ẩn
+<summary>: Xác định tiêu đề hiển thị cho phần tử <details>
+<figcaption>: Xác định chú thích cho phần tử <figure>
+<figure>: Chỉ định nội dung độc lập, như hình minh họa, sơ đồ, ảnh, danh sách mã, v.v.
+<header>: Chỉ định tiêu đề cho một tài liệu hoặc section
+<footer>: Xác định chân trang cho tài liệu hoặc section
+<main>: Chỉ định nội dung chính của một tài liệu
+<mark>: Xác định văn bản được đánh dấu / nhấn mạnh
+<nav> (navigation - dẫn đường): Xác định các liên kết điều hướng
+<section>: Xác định một phần trong tài liệu
+method: Thuộc tính method chỉ định giao thức HTTP sẽ được sử dụng khi gửi dữ liệu biểu mẫu. Có 2 phương thức là GET và POST.
+Phương thức GET:
+Nối dữ liệu biểu mẫu vào URL, theo cặp name/value
+KHÔNG BAO GIỜ sử dụng GET để gửi dữ liệu bảo mật. Như tài khoản, mật khẩu.
+Độ dài của URL bị giới hạn (2048 ký tự)
+Phương thức POST:
+Dữ liệu biểu mẫu đã gửi không được hiển thị trong URL
+POST không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu.
+
 <iframe src="https://www.toomva.com/tudien/tratu?w=we" name="vd"width="1000"height="1000"></iframe>
     <a href="https://code.ptit.edu.vn/student/question"target="vd">Nút</a>
 <h2>Ko có Semantic</h2>
@@ -23,8 +44,23 @@
     <footer class="footer">
         Footer
     </footer>
-
-<form action="https://www.w3schools.com/action_page.php" target="_blank">
-        <input name="Họ tên">
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+        <input name="Họ tên" type="password>
         <input type="submit" value="Gửi">
     </form>
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post" autocomplete="off" novalidate>
+        <label for="">Họ tên:</label>
+        <input name="Họ tên" type="email">
+        <input type="submit" value="Gửi">
+    </form>
+<label for="">Màu sắc:</label>
+        <select name="color" size="2" multiple>
+            <option value="yellow">Màu vàng</option>
+            <option selected value="red">Màu đỏ</option>
+            <option value="black">Màu đen</option>
+        </select>
+<input name="Ngày đi" type="datetime-local">
+        <input name="Ngày về" type="date">
+        <input name="THgian về" type="time">
+        <input name="chọn tệp" type="file">
+<button>Gửi</button>
