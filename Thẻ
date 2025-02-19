@@ -50,3 +50,14 @@ type="i": Các mục trong danh sách sẽ được đánh dưới dạng số L
 <ol> <li>Mục 1</li>
         <li>Mục 2</li>
         <li>Mục 3</li> </ol>
+<style>
+        .color-red{
+            color:red;
+        }
+        .font-big{
+            font-size:20px;
+        }
+    </style>
+    <h1 class="color-red">Nd the h1</h1>
+    <p class="color-red">ND the p</p>
+    <p class="color-red font-big">ND the p</p>
