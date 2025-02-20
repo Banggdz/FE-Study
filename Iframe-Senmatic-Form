@@ -20,7 +20,7 @@ Phương thức POST:
 Dữ liệu biểu mẫu đã gửi không được hiển thị trong URL
 POST không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu.
 
-<iframe src="https://www.toomva.com/tudien/tratu?w=we" name="vd"width="1000"height="1000"></iframe>
+Thuộc tính for của thẻ <label> phải bằng thuộc tính id của phần tử <input> để liên kết chúng lại với nhau. Khi đó, click vào <label> thì con trỏ sẽ tự động focus vào ô input đó src="https://www.toomva.com/tudien/tratu?w=we" name="vd"width="1000"height="1000"></iframe>
     <a href="https://code.ptit.edu.vn/student/question"target="vd">Nút</a>
 <h2>Ko có Semantic</h2>
     <div class="header">header</div>
