@@ -1,0 +1,27 @@
+<style>
+//Tự động áp dụng tất 
+*{
+            text-align: center;
+        }
+    //theo element
+        h1{
+            color:red
+        }
+        p{
+            font-size: 40px;
+        }
+     //theo id   
+        #test{
+            color:green
+        }
+    //theo class
+        .test-orange{
+            color:orange
+        }
+    </style>
+<h1>ND thẻ h1</h1>
+<p>Nội dung thẻ p</p>
+<p id="test">Nội dung thẻ p2</p>
+<p class="test-orange">Nội dung thẻ p3</p>
+<h2 class="test-orange">Nội dung thẻ h2</h2>
+    </form>
