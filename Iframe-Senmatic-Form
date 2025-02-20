@@ -72,7 +72,10 @@ Thuộc tính for của thẻ <label> phải bằng thuộc tính id của phầ
         <label for="php">Ngôn ngữ Php</label><br><br>
 //Chọn 1 đáp án
 <input type="radio"id="java" name="language" value="j">
+// Thanh kéo điều chỉnh giá trị
  <input type="range" name="volume" min="0"max="100"step="5">
+
+//chọn màu sắc
 <input type="color" name="color">
 //Gía trị ban đầu của ô input
  <input type="text" name="ho_ten"value="Nguyễn">
