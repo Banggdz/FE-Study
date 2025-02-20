@@ -1,0 +1,73 @@
+html5:viết cơ bản khung code
+
+ <a href="url">Text</a>
+Link-><p>Xem tài liệu: <a href="https://www.youtube.com/watch?v=vF9eb0YZv_M">Tại đây</a> </p>
+<p>Xem tài liệu: <a href="https://www.youtube.com/watch?v=vF9eb0YZv_M" target="_self">Tại đây</a> </p>
+<p>Xem tài liệu: <a href="https://www.youtube.com/watch?v=vF9eb0YZv_M" target="_blank" title="Đây là link sang youtube"> Tại đây</a> </p>
+Ảnh-><img src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/avatar-cute-3.jpg">
+<img src="https://dn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/avatar-cute-3.jpg" alt="thay thế khi link ảnh lỗi">
+Video-><a href="https://www.youtube.com/watch?v=vF9eb0YZv_M"title="đừng ấn vào link">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6iWUacb9DiP0Agp9bQaNao_gfCTu8a6gxA&s">
+           Tại đây</a> 
+-><video width="320" height="240" controls>
+            <source src="Rieki - 1p30s.mp44" type="video/mp4"></video>
+-><video width="320" height="240" controls loop>
+            <source src="Rieki - 1p30s.mp44"type="video/mp4></video>
+<video muted width="320" height="240" autoplay controls><source src="Rieki - 1p30s.mp4" type="video/mp4">
+ Phải tắt âm thanh mới tự động phát vid khi vào web do thg gg     </video>
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">STT</th>
+          <th rowcol="2">Họ tên</th>
+          <th>Số điện thoại</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Le Van A</td>
+          <td>0123456789</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Nguyen Thi B</td>
+          <td>0987654321</td>
+        </tr>
+      </tbody>
+</table>
+//đánh dấu bằng hình tròn.
+<ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ul>
+//đánh số type="1": Mặc định. Các mục trong danh sách sẽ được đánh dưới dạng số
+type= "A": Các mục trong danh sách sẽ được đánh dưới dạng chữ hoa
+type="a": Các mục trong danh sách sẽ được đánh dưới dạng chữ thường
+type="I": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết hoa
+type="i": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết thường
+<ol> <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li> </ol>
+<style>
+        .color-red{
+            color:red;
+        }
+        .font-big{
+            font-size:20px;
+        }
+    </style>
+    <h1 class="color-red">Nd the h1</h1>
+    <p class="color-red">ND the p</p>
+    <p class="color-red font-big">ND the p</p>
+<style>
+    .test-class{
+        color:pink;
+    }
+    #test-id{
+        color:red;
+    }
+</style>
+    <div class="test-class">Viết đoạn văn sử dụng thẻ </div>
+    <div id="test-id">Thẻ id</div>
