@@ -43,7 +43,7 @@ background-position: bottom right; // dưới - phải
 background-attachment: fixed; // Hình nền được fix cố định khi di cuộn web
 
         }
-//Tự động co giãn ko làm giảm chất lượng ảnh
+//Tự động co giãn ko làm giảm chất lượng ảnh (để lại khoảng trắng nếu ko full)
 background-size:  contain ;
 //Tự động cắt ảnh cho phù hợp kích thước
 background-size: cover ;
