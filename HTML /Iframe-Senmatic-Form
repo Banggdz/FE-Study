@@ -1,0 +1,91 @@
+<div>thẻ ko có ý nghĩa,dùng khi ko biết cho vào thẻ nào
+<article>: Xác định nội dung độc lập, khép kín
+<aside>: Xác định nội dung ngoài nội dung trang
+<details>: Xác định các chi tiết bổ sung mà người dùng có thể xem hoặc ẩn
+<summary>: Xác định tiêu đề hiển thị cho phần tử <details>
+<figcaption>: Xác định chú thích cho phần tử <figure>
+<figure>: Chỉ định nội dung độc lập, như hình minh họa, sơ đồ, ảnh, danh sách mã, v.v.
+<header>: Chỉ định tiêu đề cho một tài liệu hoặc section
+<footer>: Xác định chân trang cho tài liệu hoặc section
+<main>: Chỉ định nội dung chính của một tài liệu
+<mark>: Xác định văn bản được đánh dấu / nhấn mạnh
+<nav> (navigation - dẫn đường): Xác định các liên kết điều hướng
+<section>: Xác định một phần trong tài liệu
+method: Thuộc tính method chỉ định giao thức HTTP sẽ được sử dụng khi gửi dữ liệu biểu mẫu. Có 2 phương thức là GET và POST.
+Phương thức GET:
+Nối dữ liệu biểu mẫu vào URL, theo cặp name/value
+KHÔNG BAO GIỜ sử dụng GET để gửi dữ liệu bảo mật. Như tài khoản, mật khẩu.
+Độ dài của URL bị giới hạn (2048 ký tự)
+Phương thức POST:
+Dữ liệu biểu mẫu đã gửi không được hiển thị trong URL
+POST không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu.
+
+Thuộc tính for của thẻ <label> phải bằng thuộc tính id của phần tử <input> để liên kết chúng lại với nhau. Khi đó, click vào <label> thì con trỏ sẽ tự động focus vào ô input đó src="https://www.toomva.com/tudien/tratu?w=we" name="vd"width="1000"height="1000"></iframe>
+    <a href="https://code.ptit.edu.vn/student/question"target="vd">Nút</a>
+<h2>Ko có Semantic</h2>
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="content">
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+
+<header class="header">header</header>
+    <nav class="sidebar">sidebar</nav>
+    <main class="content">
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+    </,>
+    <footer class="footer">
+        Footer
+    </footer>
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+        <input name="Họ tên" type="password>
+        <input type="submit" value="Gửi">
+    </form>
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post" autocomplete="off" novalidate>
+        <label for="">Họ tên:</label>
+        <input name="Họ tên" type="email">
+        <input type="submit" value="Gửi">
+    </form>
+<label for="">Màu sắc:</label>
+        <select name="color" size="2" multiple>
+            <option value="yellow">Màu vàng</option>
+            <option selected value="red">Màu đỏ</option>
+            <option value="black">Màu đen</option>
+        </select>
+<input name="Ngày đi" type="datetime-local">
+        <input name="Ngày về" type="date">
+        <input name="THgian về" type="time">
+        <input name="chọn tệp" type="file">
+//Chọn nhiều đáp án
+<input type="checkbox"id="C" name="language" value="c">
+        <label for="C">Ngôn ngữ C</label><br>
+        <input type="checkbox"id="java" name="language" value="j">
+        <label for="java">Ngôn ngữ Java</label><br>
+        <input type="checkbox"id="php" name="language" value="php">
+        <label for="php">Ngôn ngữ Php</label><br><br>
+//Chọn 1 đáp án
+<input type="radio"id="java" name="language" value="j">
+// Thanh kéo điều chỉnh giá trị
+ <input type="range" name="volume" min="0"max="100"step="5">
+
+//chọn màu sắc
+<input type="color" name="color">
+//Gía trị ban đầu của ô input
+ <input type="text" name="ho_ten"value="Nguyễn">
+
+//required:bắt buộc nhập   placeholder:Chữ gợi ý trong khung input
+ <input type="text" name="ho_ten"maxlength=10 placeholder="Họ tên" required> 
+        <input type="text" name="cccd"value="0123456789"readonly>
+        <input type="email" name="email"value="vna@gmail"disabled>
+        <input type="number"name="so_luong"min="1"max="5">
+//input textarea
+<label for="gt">Giới thiệu bản thân</label>
+        <textarea id="gt"name="Giới thiệu bản thân">Xin chào,tôi tên</textarea><br>
+<button>Gửi</button>
