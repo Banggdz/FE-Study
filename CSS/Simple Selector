@@ -1,3 +1,5 @@
+//thêm 1 file css ở bên ngoài,dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link
+<link rel="stylesheet" href="style.css">
 <style>
 //Tự động áp dụng tất 
 *{
