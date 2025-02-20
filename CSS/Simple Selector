@@ -25,3 +25,38 @@
 <p class="test-orange">Nội dung thẻ p3</p>
 <h2 class="test-orange">Nội dung thẻ h2</h2>
     </form>
+//Mỗi ảnh chiếm 33% lặp đi lặp lại hết khung(chiều rộng 33% chiều cao auto)
+.bg-image{
+            background-image:url(/z6239066522684_8c5af8f497a8343ab56689108543a35c.jpg);
+            background-size:  33% auto; ;
+            width:1200px;height:700px; (độ dài khung chứa ảnh)
+background-repeat: no-repeat; // Không lặp lại ảnh
+	background-repeat: repeat-x; // Lặp theo trục ngang
+	 background-repeat: repeat-y; // Lặp theo trục dọc
+            background-position: top left; // trên - trái
+background-position: top right; // trên - phải
+background-position: top center; // trên - giữa
+background-position: bottom left; // dưới - trái
+background-position: bottom right; // dưới - phải
+background-attachment: fixed; // Hình nền được fix cố định khi di cuộn web
+
+        }
+//Tự động co giãn ko làm giảm chất lượng ảnh
+background-size:  contain ;
+//Tự động cắt ảnh cho phù hợp kích thước
+background-size: cover ;
+Content (Nội dung) - Nội dung của element, nơi văn bản và hình ảnh xuất hiện.
+Padding - Tạo một khoảng trống xung quanh nội dung. Phần đệm trong suốt.
+Border (Đường viền): Đường viền bao quanh padding (phần đệm) và nội dung.
+Margin (Lề) - Tạo khoảng cách cho vùng bên ngoài border (đường viền). Lề trong suốt.
+
+.box-model{
+            padding:50px;
+            border: 10px solid #000;
+            margin-bottom: 100px;
+        }
+(border: 10px dotted #000;)         dotted - Đường viền chấm
+                                    dashed - Đường viền nét đứt
+                                    solid - Đường viền liền
+margin:25px; //xung quanh
+margin:25px 50px //trên dưới + trái phải ----- padding tương tự
