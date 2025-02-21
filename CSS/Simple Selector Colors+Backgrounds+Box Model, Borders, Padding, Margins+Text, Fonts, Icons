@@ -1,4 +1,4 @@
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx//thêm 1 file css ở bên ngoài,dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link
+//thêm 1 file css ở bên ngoài,dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link
 <link rel="stylesheet" href="style.css">
 <style>
 //Tự động áp dụng tất 
@@ -67,8 +67,34 @@ Margin (Lề) - Tạo khoảng cách cho vùng bên ngoài border (đường vi�
                                     solid - Đường viền liền
 margin:25px; //xung quanh
 margin:25px 50px //trên dưới + trái phải ----- padding tương tự
-text-align: right; // Căn phải
-text-align: justify; // Căn đều 2 bên
+
+---------------------------> box-sizing:border-box :chiều cao tính cả border (height bình thường chỉ tính cho content)(MẶC ĐỊNH LÀ CONTENT BOX)
+text-transform: uppercase; // VIẾT CHỮ HOA
+text-transform: lowercase; // viết chữ thường
+text-transform: capitalize; // Viết Hoa Các Chữ Cái Đầu
+\Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
+Phông chữ Sans-serif (không chân) có đường kẻ rõ ràng (không có nét nhỏ đi kèm).
+Phông chữ Monospace (Đơn cách) - ở đây tất cả các chữ cái có cùng chiều rộng cố định.
+Phông chữ Cursive (Chữ viết ẩu) bắt chước chữ viết tay của con người.
+Phông chữ Fantasy (tưởng tượng) là phông chữ trang trí/vui tươi.
+font-family: Để chỉ định font chữ của văn bản
+Ví dụ:
+font-family: "Times New Roman", Times, serif;
+font-family: Arial, Helvetica, sans-serif;
+font-family: "Lucida Console", "Courier New", monospace;
+//
+font-style: Thuộc tính font-style chủ yếu được sử dụng để chỉ định văn bản in nghiêng
+normal - Văn bản được hiển thị bình thường
+italic - Văn bản được hiển thị in nghiêng
+oblique (xiên) - Văn bản "nghiêng" (xiên rất giống với chữ nghiêng, nhưng nghiêng hơn và ít được sử dụng)
+//độ dày
+font-weight: 700;
+font-weight: bold;
+font-weight: normal;
+font-weight: 400;
+6.2. Fonts
+Ví dụ:
+font-size: 12px;
 
 //Cách lấy font chữ
 
@@ -77,3 +103,8 @@ text-align: justify; // Căn đều 2 bên
 (nên tạo file css lưu vào)<style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 </style>
+//Icons
+Link website: https://fontawesome.com/search?o=r&m=free
+Link CDN: https://cdnjs.com/libraries/font-awesome
+dán link CDN lên thẻ head rồi vào website copy css của icon
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
