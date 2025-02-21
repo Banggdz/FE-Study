@@ -1,4 +1,4 @@
-//thêm 1 file css ở bên ngoài,dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx//thêm 1 file css ở bên ngoài,dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link
 <link rel="stylesheet" href="style.css">
 <style>
 //Tự động áp dụng tất 
@@ -67,3 +67,13 @@ Margin (Lề) - Tạo khoảng cách cho vùng bên ngoài border (đường vi�
                                     solid - Đường viền liền
 margin:25px; //xung quanh
 margin:25px 50px //trên dưới + trái phải ----- padding tương tự
+text-align: right; // Căn phải
+text-align: justify; // Căn đều 2 bên
+
+//Cách lấy font chữ
+
+(để trong thẻ head)<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+(nên tạo file css lưu vào)<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
