@@ -1,0 +1,21 @@
+list-style-type: chỉ định kiểu đánh dấu mục danh sách.
+ <style>
+        ul{
+            list-style-type: square;
+        }
+    </style>
+   <ul>
+    <LI>Mục 1</LI>
+    <li>Mục 2</li>
+    <li>Mục 3</li>
+   </ul>
+list-style-type: disc; // Hình tròn đen. Mặc định.
+list-style-type: circle; // Hình tròn có viền đen và trống bên trong.
+list-style-type: square; // Hình vuông
+list-style-type: disclosure-closed; // Hình tam giác trỏ sang phải
+list-style-type: none; // Bị ẩn
+list-style-type: upper-roman; // Chữ la mã I, II, III
+list-style-type: lower-alpha; // Chữ cái a, b, c
+-------------------------------------------------------
+list-style-position: outside; // Các điểm đánh dấu nằm bên ngoài
+list-style-position: inside; // Các điểm đánh dấu nằm bên tron
