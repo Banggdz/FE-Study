@@ -18,4 +18,21 @@ list-style-type: upper-roman; // Chữ la mã I, II, III
 list-style-type: lower-alpha; // Chữ cái a, b, c
 -------------------------------------------------------
 list-style-position: outside; // Các điểm đánh dấu nằm bên ngoài
-list-style-position: inside; // Các điểm đánh dấu nằm bên tron
+list-style-position: inside; // Các điểm đánh dấu nằm bên trong
+-----------------------------------------------------------
+<style>
+        table{
+            border-collapse: collapse;
+        }
+        table th,td{
+            border:1px solid #000;
+            
+        }
+        th,td{
+            padding:20px;
+        }
+        th{
+            color:aliceblue;
+            width:100px; ---> Cố định chiều rộng khi độ dài văn bản tăng
+            background: orange;
+        } </style>         
