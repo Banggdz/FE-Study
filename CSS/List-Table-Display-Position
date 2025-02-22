@@ -227,3 +227,51 @@ selector:pseudo-class {
     <li>Mục 4</li>
    </ul>>
 --------
+Pseudo-elements selectors  (Chỉ áp dụng 1 pseudo cho 1 element)
+Được sử dụng để tạo ra một phần tử giả và định kiểu (style) cho phần tử giả đó mà không cần tạo ra một phần tử thật.
+Cú pháp:
+selector::pseudo-element {
+	property: value;
+}
+::before: Chèn nội dung nào đó trước nội dung của mỗi element. (Phải thêm content: "";)
+::after: Chèn nội dung nào đó sau nội dung của mỗi element. (Phải thêm content: "";)
+::first-letter: Chọn chữ cái đầu tiên của mỗi element.
+.box::first-letter{
+   font-size:40px;
+}
+::first-line: Chọn dòng đầu tiên của mỗi element.
+::marker: Chọn các điểm đánh dấu của các mục danh sách (thẻ <ul> và <ol>)
+::selection:Style cho một vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen"). Chỉ có một số thuộc tính css khả dụng với ::selection là color, background, cursor, và outline.
+vd html(.box span{
+    background-color: orange;
+   }
+   </style>
+   <div class="box">
+    <span>Nội dung đằng trước</span>
+    Nội dung 1
+   </div>)
+css(.box::before{
+        content:"v";
+        background-color: orange;
+        width: 20px;height:20px;
+        padding-top:20px;
+        margin-top:20px;
+        border-radius: 50%;
+        text-align:center;
+        display: inline-block;
+    }
+   </style>
+   <div class="box">
+    Nội dung 1
+   </div>)
+
+ul li::marker{
+    color:red;
+   }
+   </style>
+   <ul>
+    <li>Mục 1</li>
+    <li>Mục 2</li>
+    <li>Mục 3</li>
+    <li>Mục 4</li>
+   </ul>>
