@@ -211,3 +211,19 @@ selector:pseudo-class {
    <a href="#123" title="Đừng ấn">Youtube</a>
    <div class="box">Nội dung<i>Icon</i>
    </div>
+
+<style>  
+   ul li:first-child{
+    background: purple;
+   }
+   ul li:nth-child(2n+1){
+    background-color: aqua;
+   }
+   </style>
+   <ul>
+    <li>Mục 1</li>
+    <li>Mục 2</li>
+    <li>Mục 3</li>
+    <li>Mục 4</li>
+   </ul>>
+--------
