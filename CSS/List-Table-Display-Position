@@ -101,6 +101,13 @@ position: sticky; // Có thể hiểu đơn giản là sự kết hợp của po
             position: fixed;
             left:20px;
             top:30px
+.header{
+            position:sticky;
+            top:0;left:0;
+            background-color: darkorchid;
+            width: 100%;
+            z-index:1 ;
+        }
         }
     </style>
     <div class="box1">Box1</div>
@@ -110,3 +117,34 @@ Thuộc tính z-index thiết lập thứ tự xếp chồng nhau của một th
 Giá trị mặc định là 0.
 z-index càng cao thì element đó càng nằm trên.
 Chú ý: z-index chỉ làm việc cùng với thuộc tính position có giá trị sau: absolute, fixed, relative, sticky. Đối với giá trị static thì z-index không áp dụng được.
+-----------------------------------
+overflow xác định điều gì sẽ xảy ra nếu một thành phần box tràn nội dung.
+overflow: visible; // Khi chiều cao của box không đủ chứa text, thì text vẫn hiển thị tràn qua box, đây là mặc định.
+overflow: hidden; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi.
+overflow: scroll; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text. Khi sử dụng thành phần này sẽ xuất hiện cả thanh scroll ngang và dọc.
+overflow: auto; // Khi chiều cao của box không đủ chứa text, thì thanh scroll sẽ tự động hiển thị. Khi sử dụng thành phần này sẽ xuất hiện thanh scroll dọc.<style>
+    .box{
+        background: yellow;
+        border: 3px solid #000;
+        width: 100px;
+        height:200px;
+        overflow: auto;
+    }
+   </style>
+   <div class="box">
+    Cựu tiền đạo người Trôi.
+   </div> 
+----------------------------------Combinator selectors (Bộ chọn tổ hợp)--------------------------
+Adjacent sibling selectors (Bộ chọn anh chị em liền kề)
+<style>    CHỌN THẺ p ĐẦU TIÊN CÙNG CẤP NẰM NGÀY DƯỚI THẺ div
+    div+p{
+        background-color: yellow;
+    }
+   </style>
+vd:<p>Nội dung 0</p>
+   <div>
+    <p>Nội dung 1</p>
+    <p>Nội dung 2</p>
+   </div>
+   <p>Nội dung 3</p> -->chọn
+   <p>Nội dung 4</p>
