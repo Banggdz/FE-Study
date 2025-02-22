@@ -148,3 +148,66 @@ vd:<p>Nội dung 0</p>
    </div>
    <p>Nội dung 3</p> -->chọn
    <p>Nội dung 4</p>
+------------
+<style>  
+Tìm thg child trong parent; trong child tìm h3
+    .parent .child h3{
+    background-color:blue;
+   }
+   .parent>h3{
+    background-color: orange;
+   }
+   </style>
+   <h3>Nội dung khác</h3>
+   <div class="parent">
+    <h3>Nội dung</h3>
+    <div class="child"><h3>Nội dung 1</h3></div>
+    <div class="child"><h3>Nội dung 2</h3></div>
+    <div class="child"><h3>Nội dung 3</h3></div>
+    <div class="child"><h3>Nội dung 4</h3></div>
+   </div>
+-------------------
+selector:pseudo-class {
+	property: value;
+}
+:link: khi liên kết chưa được truy cập lần nào. (Chỉ dùng cho thẻ a)
+:visited: khi liên kết đã được truy cập sau lần đầu tiên. (Chỉ dùng cho thẻ a)
+:hover: khi di chuyển chuột lên element.
+:active: khi phần tử được click vào, áp dụng cho tất cả các thẻ.
+:first-child: thiết lập thuộc tính cho element đầu tiên.
+:last-child: thiết lập thuộc tính cho element cuối cùng.
+:nth-child(n): n có thể là các giá trị even (chẵn), odd (lẻ), một số, một biểu thức (an + b).
+ <style>  
+   
+   a:link{
+    color:yellow;
+   }
+   a{
+    color: black;
+   }
+   a:visited{
+    color:red;
+   }
+   a:hover{
+    color:green;
+   }
+    .box{
+        background-color: yellow;
+        width: 100px; height:100px;
+    }
+    .box:hover{
+        background-color:red;
+    }
+    .box i{
+        display: none;
+    }
+    .box:active{
+        background-color: brown;
+    }
+    .box:hover i{
+        display:inline;
+    }
+   </style>
+   <a href="#123" title="Đừng ấn">Youtube</a>
+   <div class="box">Nội dung<i>Icon</i>
+   </div>
