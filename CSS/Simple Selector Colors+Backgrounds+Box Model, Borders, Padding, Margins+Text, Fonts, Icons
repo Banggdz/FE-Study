@@ -108,3 +108,5 @@ Link website: https://fontawesome.com/search?o=r&m=free
 Link CDN: https://cdnjs.com/libraries/font-awesome
 dán link CDN lên thẻ head rồi vào website copy css của icon
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<p><i class="fa-brands fa-facebook">gg</i><i class="fa-brands fa-google"></i><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-instagram"></i></p>
