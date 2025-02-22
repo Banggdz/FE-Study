@@ -62,6 +62,7 @@ display: inline-block; (Chiều rộng mặc định bằng chiều rộng của
 display: none; (Ẩn đi hoàn toàn)
 <span class="inline">Thẻ inline 2</span>
 <span class="block">Thẻ block 2</span>
+<span class="none">ẩn</span>
 -----------------
 visibility: hidden; // Ẩn nhưng vẫn chiếm một khoảng trống
 visibility: visible; // Hiển thị. mặc định.
