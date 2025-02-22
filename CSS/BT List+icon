@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <style>
+        ul{
+            list-style-type:none;
+            
+        }
+        ul.item li{
+            border:1px solid #000;
+            width:200px;height:30px;font-size:18px;
+            padding-left: 20px;padding-top:10px
+        }
+        ul.item li:hover{
+            background-color: #004087;
+            color:white
+        }
+        ul.icon {
+            display:flex;
+        }
+        ul.icon li:hover{
+            background-color: #b55617;
+            color:white
+        }
+        ul.icon li {
+            margin-left: 10px;
+            border-radius: 50%;
+            padding:10px;
+            border:2px solid gray;
+            background-color: gray;
+        }
+        ul.icon li:first-child{
+            margin-left:0px;
+        }
+    </style>
+   <h1><b>Bài tập về list</b></h1>
+   <p><b>Yêu cầu:</b>Code các menu như dưới đây.</p>
+   <ul class="item">
+    <li> Quần áo</li>
+    <li> Giày dép</li>
+    <li> Mũ</li>
+    <li> Khăn</li>
+    <li> Găng tay</li>
+   </ul>
+    <ul class="icon">
+        <li><i class="fa-brands fa-google"></i></li>
+        <li><i class="fa-brands fa-facebook"></i></li>
+        <li><i class="fa-brands fa-tiktok"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+    </ul>  
+</body>
+</html>
+
