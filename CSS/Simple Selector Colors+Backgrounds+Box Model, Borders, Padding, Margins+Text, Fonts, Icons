@@ -67,14 +67,15 @@ Margin (Lề) - Tạo khoảng cách cho vùng bên ngoài border (đường vi�
                                     solid - Đường viền liền
 margin:25px; //xung quanh
 margin:25px 50px //trên dưới + trái phải ----- padding tương tự
-
+margin: 10px 20px 30px 40px; (Áp dụng cho trên, phải, dưới và trái theo thứ tự)
+-------------------------------------------------------------------
 ---------------------------> box-sizing:border-box :chiều cao tính cả border (height bình thường chỉ tính cho content)(MẶC ĐỊNH LÀ CONTENT BOX)
 text-transform: uppercase; // VIẾT CHỮ HOA
 text-transform: lowercase; // viết chữ thường
 text-transform: capitalize; // Viết Hoa Các Chữ Cái Đầu
 
 text-decoration:none;  bỏ gạch chân (như gạch chân khi gán link)
-
+----------------------------------------------------------------
 \Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
 Phông chữ Sans-serif (không chân) có đường kẻ rõ ràng (không có nét nhỏ đi kèm).
 Phông chữ Monospace (Đơn cách) - ở đây tất cả các chữ cái có cùng chiều rộng cố định.
