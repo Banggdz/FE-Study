@@ -228,6 +228,7 @@ selector:pseudo-class {
    </ul>>
 --------
 Pseudo-elements selectors  (Chỉ áp dụng 1 pseudo cho 1 element)
+--Mặc định là display:inline
 Được sử dụng để tạo ra một phần tử giả và định kiểu (style) cho phần tử giả đó mà không cần tạo ra một phần tử thật.
 Cú pháp:
 selector::pseudo-element {
