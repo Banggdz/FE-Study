@@ -72,6 +72,9 @@ margin:25px 50px //trên dưới + trái phải ----- padding tương tự
 text-transform: uppercase; // VIẾT CHỮ HOA
 text-transform: lowercase; // viết chữ thường
 text-transform: capitalize; // Viết Hoa Các Chữ Cái Đầu
+
+text-decoration:none;  bỏ gạch chân (như gạch chân khi gán link)
+
 \Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
 Phông chữ Sans-serif (không chân) có đường kẻ rõ ràng (không có nét nhỏ đi kèm).
 Phông chữ Monospace (Đơn cách) - ở đây tất cả các chữ cái có cùng chiều rộng cố định.
