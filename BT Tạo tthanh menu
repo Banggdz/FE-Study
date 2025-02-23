@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="web">
+        <header class="header">
+            <div class="grid">
+            <nav class="header_navbar">
+                <ul class="header_navbar-list">
+                    <li class="header_navbar-item taogach">Vào cửa hàng trên ứng dụng shoppee</li>
+                    <li class="header_navbar-item">Kết nối</li>
+                </ul>
+                <ul class="header_navbar-list">
+                    <li class="header_navbar-item"><a href="" class="header_navbar-item-link">Thông báo</a></li>
+                    <li class="header_navbar-item"><a href="" class="header_navbar-item-link">Trợ giúp</a></li>
+                    <li class="header_navbar-item header_navbar-item--strong taogach">Đăng ký</li>
+                    <li class="header_navbar-item header_navbar-item--strong">Đăng nhập</li>
+                </ul>
+            </nav>
+         </div> 
+        </header>
+        <div class="container">
+
+        </div>
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
+</html>
+
+style.css:
+.header{
+    height:120px;
+    background-image: linear-gradient(90deg,rgb(245, 71, 71),rgb(254, 1, 1));
+}
+.header_navbar-list{
+    list-style-type: none;
+    padding-left:0;/*giúp ul đầu tiên sát lề*/
+}
+.header_navbar{
+    display: flex;/*Xếp các element (ở đây là 2ul) trong 1 hàng*/
+    justify-content:space-between;/*đối xứng 2 bên */
+}
+.header_navbar-item{
+    display: inline-block; /*biến block(li) thành inline-block->các li trong ul thành 1 hàng)*/
+    text-decoration: none;
+    position: relative;
+    margin:0 8px  /*Tăng khoảng cách giữa các li*/
+}
+.header_navbar-item-link,.header_navbar-item{
+    text-decoration: none;
+    color:white;
+    font-weight: 200;
+    font-size:1.2rem;
+
+}
+.grid{
+    width: 1400px;/*Căn chỉnh so với cả phần header (chỉnh khoảng cách lề trái và phải) */
+    margin:0px auto;/*Thiết lập khoảng cách trên và dưới là 0 và khoảng cách trái và phải là auto*/
+}
+.header_navbar-item--strong{
+    font-weight: 600; 
+    
+}
+.taogach::after{
+    content:"";
+    display: block;
+    position:absolute;
+    border-left:1px solid pink;
+    height:20px;
+    right: -9px;top:50%;
+    transform:translateY(-50%)
+}
