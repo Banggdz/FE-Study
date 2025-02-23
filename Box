@@ -1,3 +1,7 @@
+block:mỗi phần tử trên 1 block nằm trên 1 hàng
+inline:nằm cùng 1 hàng
+inline-block:cho các phần tử trong block nằm trên 1 hàng
+
 Tạo các box nằm ngang
 <style>
         .box{
