@@ -38,4 +38,26 @@ div.head h2.title:last-child  {color: yellow; }   0-0-3-2  pseudo-class
       </h2>
     </div>
 </main>
+------------------------------------
+IMPORTANT
+Important được sử dụng để thay đổi thứ tự ưu tiên của CSS, khi một thuộc tính CSS nào đó được gán lệnh Important thì đồng nghĩa với việc nó sẽ có mức ưu tiên cao nhất. Nếu có nhiều thuộc tính cùng có !important thì lại quay về bài toán tính độ ưu tiên.
+h2 { color: red!important; }
+-----------------------------------
+Các hàm toán học:
 
+Hàm calc()
+Thực hiện một phép tính, kết quả sẽ lấy làm giá trị thuộc tính. Các toán tử sau có thể được sử dụng: + – * /
+Ví dụ: width: calc(100% - 100px); 
+
+----------------------------------
+attr() là một hàm CSS trả về giá trị của một thuộc tính
+<style>
+    [data-text]::before {
+	content: attr(data-text);
+    }
+</style>
+VD:<style>
+        span::after{
+            content:attr(data-text);
+        }</style>
+   <span data-text="Xin chào">Đỗ Nam trung</span>
