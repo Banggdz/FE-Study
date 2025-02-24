@@ -114,7 +114,7 @@ position: sticky; // Có thể hiểu đơn giản là sự kết hợp của po
     <div class="box2">Box2<div class="box3">Box3</div></div>
     <div class="box4">Box4</div>
 Thuộc tính z-index thiết lập thứ tự xếp chồng nhau của một thành phần vị trí.
-Giá trị mặc định là 0.
+Giá trị mặc định là 0. POSITION static khong co z index;
 z-index càng cao thì element đó càng nằm trên.
 Chú ý: z-index chỉ làm việc cùng với thuộc tính position có giá trị sau: absolute, fixed, relative, sticky. Đối với giá trị static thì z-index không áp dụng được.
 -----------------------------------
