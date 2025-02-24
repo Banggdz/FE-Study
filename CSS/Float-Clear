@@ -76,6 +76,7 @@ Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng
             width:25%;
             float:right;
         }
+(thuộc tính float làm cho thg cha chứa nó bị co vào height =0 (Do footer ăn vào)->đặt clearfix dưới cùng trong thg cha để khôi phục lại chiều cao(ngăn footer chiếm ko gian))
         .clear-fix{
             clear:both;
         }
