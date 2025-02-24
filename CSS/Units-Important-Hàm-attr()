@@ -61,3 +61,26 @@ VD:<style>
             content:attr(data-text);
         }</style>
    <span data-text="Xin chào">Đỗ Nam trung</span>
+-------------------------------
+BIẾN
+	global:
+		:root{
+            --color-one:blue;
+            --color-two:red;
+        }
+        h2{
+            color:var(--color-one);
+        }
+        p{
+            color:var(--color-two);
+        }
+        </style>
+        <p>Nội dung 1<b><h2>nỘI DUNG 2</h2></b></p>
+  local:
+	h3{
+	--local-color:green;
+	color:val(--local-color)
+	}
+	h4{
+	color:val(--local-color)
+	}
