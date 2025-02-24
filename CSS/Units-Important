@@ -1,0 +1,41 @@
+Độ dài tuyệt đối
+Là loại đơn vị có giá trị cố định và thể hiện chính xác chiều dài kích thước nó hiển thị, không phụ thuộc cũng như không thay đổi bởi bất kỳ tác động bên ngoài nào.
+px: pixels (1px = 1/96 in) tương ứng với một điểm ảnh trên máy tính.
+Độ dài tương đối
+Phụ thuộc vào 1 thành phần nào đó mới xác định được giá trị của nó.
+%: giá trị tương đối so với phần tử cha.
+rem: giá trị tương đối với font-size của phần tử gốc. Phần tử gốc ở đây là thẻ html.-->1rem=font-size của gốc html
+em: 1em tương đương với kích cỡ của font-size của phần tử cha có định nghĩa font-size.->1em=font-size của cha đầu tiên có font-size
+vw (viewport width): 1vw tương đương với 1% của chiều rộng cửa sổ trình duyệt.
+vh (viewport height): 1vh tương đương với 1% của chiều cao cửa sổ trình duyệt.
+ex: 1ex tương đương với chiều cao (height) của một chữ x (in thường) của font hiện tại.
+ch: 1ch tương đương với chiều rộng (width) của một số 0 theo size hiện tại.
+---------------------------------------
+giá trị nào càng cao thì càng được ưu tiên:
+1-0-0-0: Inline styles
+0-X-0-0: Số lượng ID selector
+0-0-Y-0: Số lượng Classes, attributes và pseudo-classes
+0-0-0-Z: Số lượng Elements và pseudo-elements
+Universal selector (*) và combinators selector (+, >, ~) không làm tăng tính đặc hiệu.
+h2 { color: red; }   0-0-0-1
+h2.title  { color: blue; }              0-0-1-1->11
+div h2.title  { color: orange; }        0-0-1-2->12  (2 element:div,h2 ; 1 class:title)
+.head h2.title  {color: green; }        0-0-2-1->21
+div.head h2.title  {color: gray; }      0-0-2-2
+div.head h2.title:last-child  {color: yellow; }   0-0-3-2  pseudo-class       
+#main div.head h2.title  {color: pink; }          0-1-2-2
+#main div#head h2.title  {color: purple; }       0-2-1-2
+#main div#head h2.title::first-letter  {color: red; }  0-2-1-3 pseudo-elements
+#main div#head h2::first-letter  {color: yellow; }     0-2-0-3
+
+<main id="main">
+    <div class="head" id="head">
+      <h2 class="title">
+        Tiêu đề 1
+      </h2>
+      <h2 class="title"style="color:#000"> ưu tiên nhất (inline)
+        Tiêu đề 2
+      </h2>
+    </div>
+</main>
+
