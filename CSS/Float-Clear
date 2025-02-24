@@ -1,0 +1,55 @@
+<style>
+        .element-parent{
+            border:5px solid red;
+        }
+        .element-child{
+            color:#fff;
+            font-size:20px;
+            padding:20px;
+            text-align:center;
+        }
+        .element-a{
+            height:300px;
+            background: yellow;
+        }
+        .element-b{
+            height:150px;
+            background: blue;
+        }
+        .element-c{
+            height:200px;
+            background:green;
+        }
+        .element-a{
+            float:left;
+        }
+        .element-c{
+            float:right;
+        }
+        .element-b{
+            float:right;
+        }
+        .clear-both{
+            clear:both;/*Ngăn ko đè lên vạch ngoài cùng*/
+        }
+    </style>
+    <div class="element-parent">
+        <div class="element-child element-a">Phần tử A</div>
+        <div class="element-child element-b">Phần tử B</div>
+        <div class="element-child element-c">Phần tử C</div>
+        <div class="clear-both"></div>
+    </div>
+FLOAT:Thuộc tính float là một thuộc tính được sử dụng để chuyển một phần tử sang góc trái hoặc góc bên phải của không gian bao quanh nó.
+Float có các giá trị sau:
+float: left; // Phần tử nằm phía bên trái.
+float: right; // Phần tử nằm phía bên phải.
+float: none; // Phần tử nằm tại chính vị trí của nó (Mặc định).
+---------------------------------------
+Ngăn chặn phần tử B chiếm vùng không gian của phần tử A (với A là phần tử sử dụng float).
+Thuộc tính clear có các giá trị sau:
+clear: left;
+Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: left;
+Thuộc tính clear: left; không có tác dụng khi phần tử A sử dụng float: right;
+clear: right;
+Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: right;
+Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng float: left;
