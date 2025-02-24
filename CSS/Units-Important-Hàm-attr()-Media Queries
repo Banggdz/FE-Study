@@ -84,3 +84,43 @@ BIẾN
 	h4{
 	color:val(--local-color)
 	}
+-----------------------------------------------
+ Media Queries
+	Mobile first:
+		 @media screen and (min-width: 320px) {
+        /* Code */
+      }
+      /* Smart phone nhỏ(480 x 640) */
+      @media screen and (min-width: 480px) {
+        /* Code */
+      }
+      /* Ipad dọc(768 x 1024) */
+      @media screen and (min-width: 768px) {
+        /* Code */
+      }
+      /* Ipad ngang(1024 x 768) */
+      @media screen and (min-width: 1024px) {
+        /* Code */
+      }
+</style>
+	PC first (Responsive):PC first là khái niệm để chỉ việc lập trình giao diện từ màn hình to đến màn hình nhỏ.
+Để làm việc với mô hình này chúng ta sử dụng max-width trong media query.
+Dưới đây là các media query điển hình:
+	<style>
+      /*Ipad ngang(1024 x 768)*/
+      @media screen and (max-width: 1024px) {
+        /* Code */
+      }
+      /*Ipad dọc(768 x 1024)*/
+      @media screen and (max-width: 768px) {
+        /* Code */
+      }
+      /* Smart phone (480 x 640)*/
+      @media screen and (max-width: 480px) {
+        /* Code */
+      }
+      /* Smart phone nhỏ */
+      @media screen and (max-width: 320px) {
+        /* Code */
+      }
+</style>
