@@ -1,0 +1,125 @@
+Media Queries
+	Mobile first:
+		 @media screen and (min-width: 320px) {
+        /* Code */
+      }
+      /* Smart phone nhỏ(480 x 640) */
+      @media screen and (min-width: 480px) {
+        /* Code */
+      }
+      /* Ipad dọc(768 x 1024) */
+      @media screen and (min-width: 768px) {
+        /* Code */
+      }
+      /* Ipad ngang(1024 x 768) */
+      @media screen and (min-width: 1024px) {
+        /* Code */
+      }
+</style>
+	PC first (Responsive):PC first là khái niệm để chỉ việc lập trình giao diện từ màn hình to đến màn hình nhỏ.
+Để làm việc với mô hình này chúng ta sử dụng max-width trong media query.
+Dưới đây là các media query điển hình:
+	<style>
+      /*Ipad ngang(1024 x 768)*/
+      @media screen and (max-width: 1024px) {
+        /* Code */
+      }
+      /*Ipad dọc(768 x 1024)*/
+      @media screen and (max-width: 768px) {
+        /* Code */
+      }
+      /* Smart phone (480 x 640)*/
+      @media screen and (max-width: 480px) {
+        /* Code */
+      }
+      /* Smart phone nhỏ */
+      @media screen and (max-width: 320px) {
+        /* Code */
+      }
+
+</style>
+<style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            background: #7EBFB2;
+            padding:20px;
+        }
+        .content{
+            background: #9BB6BD;
+            padding:20px;
+            height:600px;
+            width:70%;
+            float:left;
+        }
+        .aside{
+            background: #F6DAC9;
+            padding:20px;
+            height:600px;
+            width:30%;
+            float:right;
+        }
+        .box{
+            background: #F2F1CA;
+            padding:20px;
+            height:150px;
+            width:calc(25% - 7.5px);
+            float:left;
+            margin-right: 10px;
+            margin-bottom:10px;
+        }
+        .box:nth-child(4){
+            margin-right:0;
+        }
+        .footer{
+            background: pink;
+            padding:20px;
+        }
+        .clear-both{
+            clear:both;
+        }
+        .section-two{
+            margin-top:10px;
+        }
+        @media screen and (max-width:768px){
+            .content{
+                width:100%;
+            }
+            .aside{
+                width:100%;
+            }
+            .box{
+                 width:calc(50% - 5px); /* Giup 2 box tren duoi dung canh nhau */
+            }
+            .box:nth-child(2){
+                margin-right:0;
+            }
+        }
+        @media screen and (max-width:480px){
+            .box{
+                width:100%;
+                margin-right: 0;
+            }
+        }
+        </style>
+        <nav class="body">
+        <header class="header">Header</header>
+        <div class="section-one">
+            <div class="content">
+                Content
+            </div>
+            <div class="aside">
+                Aside
+            </div>
+            <div class="clear-both"></div>
+        </div>
+        <div class="section-two">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="clear-both"></div>
+        </div>
+        <footer class="footer">footer</footer>
+    </nav>
