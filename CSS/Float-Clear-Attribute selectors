@@ -98,3 +98,45 @@ Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng
     <div class="box footer">
         Footer
     </div>
+----------------------------------------------
+ATTRIBUTE
+[attribute*="value"]
+Chọn tất cả các phần tử có thuộc tính [attribute] chứa giá trị value.
+Lưu ý: Giá trị không nhất thiết phải là một từ nguyên vẹn!
+<style>
+       a[target]{
+        background-color: yellow;
+       }
+       a[target="_blank"]{
+        background:red;
+       }
+       a[title="website Google"]{
+        background-color: rgb(17, 119, 208);
+       }
+    </style>
+    <a href="https://www.youtube.com/watch?v=gHDekJJh4iw"title="website Google">Google</a>
+    <a href="https://www.youtube.com/watch?v=Jah2M5u8Dak"title="website Facbook"target="_blank">Facebook</a>
+    <a href="https://www.youtube.com/watch?v=P9XEakfZLzc"title="website Youtube"target="">Youtube</a>
+[attribute|="value"]
+Chọn các phần tử có thuộc tính [attribute], giá trị có thể chính xác là giá trị được chỉ định hoặc giá trị được chỉ định theo sau dấu gạch nối (-).
+Lưu ý: Giá trị phải là một từ nguyên vẹn, đơn lẻ như class="top" hoặc theo sau là dấu gạch ngang ( - ), như class="top-text".
+<style>
+       p[class|="top"]{
+        background:yellow
+       }
+    </style>
+    <P class="top-header test">ND1</P>
+    <P class="top- header test">ND2</P>
+    <p class="topheader">ND3</p>
+    <p class="top">ND4</p>
+    <p class="top test">ND5</p>
+[attribute~="value"]
+Chọn tất cả các phần tử có thuộc tính [attribute] phải chứa giá trị value.
+Nhưng value đó phải đứng độc lập, không được viết liền với từ khác.
+value phải là 1 từ khóa duy nhất.
+[attribute^="value"]
+Chọn tất cả các phần tử có thuộc tính [attribute] bắt đầu bằng giá trị value
+Khác với [attribute|="value"] ở chỗ nó không có ngoại lệ và chọn tất cả các phần tử bắt đầu bằng value, được phép viết liền với các từ khác.
+[attribute$="value"]
+Chọn tất cả các phần tử có thuộc tính [attribute] kết thúc bằng giá trị value.
+Lưu ý: Giá trị có thể được viết liền với từ khác.
