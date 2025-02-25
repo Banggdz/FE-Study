@@ -98,6 +98,91 @@ Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng
     <div class="box footer">
         Footer
     </div>
+
+ <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            background: #7EBFB2;
+            padding:20px;
+        }
+        .content{
+            background: #9BB6BD;
+            padding:20px;
+            height:600px;
+            width:70%;
+            float:left;
+        }
+        .aside{
+            background: #F6DAC9;
+            padding:20px;
+            height:600px;
+            width:30%;
+            float:right;
+        }
+        .box{
+            background: #F2F1CA;
+            padding:20px;
+            height:150px;
+            width:calc(25% - 7.5px);
+            float:left;
+            margin-right: 10px;
+            margin-bottom:10px;
+        }
+        .box:nth-child(4){
+            margin-right:0;
+        }
+        .footer{
+            background: pink;
+            padding:20px;
+        }
+        .clear-both{
+            clear:both;
+        }
+        .section-two{
+            margin-top:10px;
+        }
+        @media screen and (max-width:768px){
+            .content{
+                width:100%;
+            }
+            .aside{
+                width:100%;
+            }
+            .box{
+                 width:calc(50% - 5px); /* Giup 2 box tren duoi dung canh nhau */
+            }
+            .box:nth-child(2){
+                margin-right:0;
+            }
+        }
+        @media screen and (max-width:480px){
+            .box{
+                width:100%;
+                margin-right: 0;
+            }
+        }
+        </style>
+        <nav class="body">
+        <header class="header">Header</header>
+        <div class="section-one">
+            <div class="content">
+                Content
+            </div>
+            <div class="aside">
+                Aside
+            </div>
+            <div class="clear-both"></div>
+        </div>
+        <div class="section-two">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="clear-both"></div>
+        </div>
+        <footer class="footer">footer</footer>
 ----------------------------------------------
 ATTRIBUTE
 [attribute*="value"]
