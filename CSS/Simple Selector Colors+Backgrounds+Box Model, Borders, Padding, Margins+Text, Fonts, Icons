@@ -73,7 +73,7 @@ margin: 10px 20px 30px 40px; (Áp dụng cho trên, phải, dưới và trái th
 text-transform: uppercase; // VIẾT CHỮ HOA
 text-transform: lowercase; // viết chữ thường
 text-transform: capitalize; // Viết Hoa Các Chữ Cái Đầu
-
+text-align:căn giữa
 text-decoration:none;  bỏ gạch chân (như gạch chân khi gán link)
 ----------------------------------------------------------------
 \Phông chữ Serif (có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
