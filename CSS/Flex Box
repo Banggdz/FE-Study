@@ -1,0 +1,284 @@
+Flexbox Layout là một kiểu bố cục trang có khả năng:
+Tự cân đối kích thước
+Thay đổi chiều rộng/chiều cao
+Thay đổi thứ tự phần tử
+Flexbox có 2 thành phần là:
+container: là phần tử cha dùng để bọc bên ngoài.
+item: là phần tử con của container.
+VD:<style>
+        .container{
+            background-color: palevioletred;
+            padding:20px;
+            border-radius:5px;
+        }
+        .item{
+            background-color: orange;
+            border:3px solid #fff;
+            padding:10px;
+            margin:10px;
+            color:black;
+            border-radius:5px;
+            text-align: center;
+            width:150px;
+        }
+        .container{
+            /* display:inline-flex; */
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+---DISPLAY FLEX---
+ flex  :  Giúp các thành phần linh hoạt. Chiều rộng bằng 100%.
+.container {
+        display: flex;
+}
+ inline-flex  :  Giúp các thành phần linh hoạt. Chiều rộng bằng chiều rộng của các item bên trong.
+.container {
+        display: inline-flex;
+}
+---FLEX DIRECTION---
+ row
+.container {
+        display: flex;
+        flex-direction: row;
+}
+Mặc định. Item được sắp xếp theo chiều ngang, từ trái qua phải.
+
+row-reverse
+.container {
+        display: flex;
+        flex-direction: row-reverse;
+}
+Item được sắp xếp theo chiều ngang, từ phải qua trái.
+
+ column
+.container {
+        display: flex;
+        flex-direction: column;
+}
+Item được sắp xếp theo chiều dọc, từ trên xuống dưới.
+
+column-reverse
+.container {
+        display: flex;
+        flex-direction: column-reverse;
+}
+Item được sắp xếp theo chiều dọc, từ dưới lên trên.
+
+---FLEX WRAP---
+Thuộc tính flex-wrap cho phép item có tự động xuống dòng hay không khi kích thước container thay đổi.
+Cú pháp:
+selector {
+    flex-wrap: gia-tri;
+}
+ nowrap
+.container {
+        display: flex;
+        flex-wrap: nowrap;
+}
+Mặc định, tất cả các item sẽ nằm trên một dòng.
+
+wrap
+.container {
+        display: flex;
+        flex-wrap: wrap;
+}
+Khi tổng chiều rộng các item cộng lại lớn hơn chiều rộng của container thì item sẽ tự động xuống dòng.
+
+ wrap-reverse
+.container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+}
+Tương tự như wrap, nhưng thay vì xuống dòng thì item sẽ tự động nhảy lên trên.
+
+---JUSTIFY CONTENT--- Căn ngang
+Thuộc tính justify-content để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục main-axis.
+Cú pháp:
+selector {
+    justify-content: gia-tri;
+}
+
+ flex-start
+.container {
+        display: flex;
+        justify-content: flex-start;
+}
+Mặc định. Item sẽ bắt đầu từ lề chính main-start của container.
+
+flex-end
+.container {
+        display: flex;
+        justify-content: flex-end;
+}
+Item sẽ bắt đầu từ lề chính main-end của container (khác với flex-direction: row-reverse; là đổi hướng hiển thị).
+
+ center
+.container {
+        display: flex;
+        justify-content: center;
+}
+Item sẽ nằm giữa container.
+
+space-between
+.container {
+        display: flex;
+        justify-content: space-between;
+}
+Khoảng cách giữa các item bằng nhau.
+Item đầu tiên và cuối cùng sát với lề.
+
+ space-around
+.container {
+        display: flex;
+        justify-content: space-around;
+}
+Tương tự space-between, nhưng khác ở chỗ:
+Khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item.
+space-evenly
+
+.container {
+        display: flex;
+        justify-content: space-evenly;
+}
+Tương tự space-between, nhưng khác ở chỗ:
+Khoảng cách giữa item và lề = khoảng cách giữa item và item.
+
+---ALIGN ITEM--- đặt trong container Căn dọc
+Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis.
+Dùng để căn chỉnh cho một dòng.
+Cú pháp:
+selector {
+    align-items: gia-tri
+
+ stretch
+.container {
+        display: flex;
+        align-items: stretch;
+}
+Mặc định. Các phần tử sẽ tự động tăng chiều cao để lấp đầy chiều cao của container, nhưng sẽ ưu tiên giá trị height (nếu có).
+flex-start
+.container {
+        display: flex;
+        align-items: flex-start;
+}
+Item sẽ bắt đầu từ lề cross-start của container.
+flex-end
+.container {
+        display: flex;
+        align-items: flex-end;
+}
+Item sẽ bắt đầu từ lề cross-end của container.
+center
+.container {
+        display: flex;
+        align-items: center;
+}
+Item sẽ căn giữa theo chiều của cross-axis.
+
+---ALIGN CONTENT---
+Thuộc tính align-content sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis.
+Dùng để căn chỉnh cho nhiều dòng.
+ stretch
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+}
+Mặc định. Các phần tử tự động tăng chiều cao sao cho lấp đầy container (Vẫn ưu tiên giá trị height nếu có)
+ flex-start
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+}
+Item sẽ bắt đầu từ lề chứa cross-start của container.
+flex-end
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+}
+Item sẽ bắt đầu từ lề chứa cross-end của container.
+center
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+}
+Item sẽ nằm giữa container căn theo cross-axis.
+ space-between
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+}
+Khoảng cách giữa các item bằng nhau.
+Item đầu tiên và cuối cùng sát với lề.
+space-around
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+}
+Tương tự space-between, nhưng khác ở chỗ:
+Khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item.
+space-evenly
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+}
+Tương tự space-between, nhưng khác ở chỗ:
+Khoảng cách giữa item và lề = khoảng cách giữa item và item.
+
+---ALIGN SELF---
+Tương tự như align-items nhưng là áp dụng cho một item nào đó.
+
+ auto
+.item:nth-child(2) {
+      align-self: auto;
+}
+Mặc định.
+stretch
+.item:nth-child(2) {
+      align-self: stretch;
+}
+Các phần tử sẽ tự động tăng chiều cao để lấp đầy chiều cao của container, nhưng sẽ ưu tiên giá trị height (nếu có).
+ flex-start
+.item:nth-child(2) {
+      align-self: flex-start;
+}
+Item sẽ bắt đầu từ lề cross-start của container.
+flex-end
+.item:nth-child(2) {
+      align-self: flex-end;
+}
+Item sẽ bắt đầu từ lề cross-end của container.
+center
+.item:nth-child(2) {
+      align-self: center;
+}
+Item sẽ căn giữa theo chiều của cross-axis.
+
+---ORDER---
+Thuộc tính order dùng để sắp xếp lại vị trí của các item.
+Cú pháp:
+selector {
+    order: gia-tri; /* mặc định là 0 */
+}
+Trong đó: gia-tri >= 0
+.item:nth-child(1){
+           order:2;
+        }
+        .item:nth-child(2){
+           order:1;
+        }
+        .item:nth-child(3){
+           order:0;
+        }
