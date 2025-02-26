@@ -1,0 +1,33 @@
+TRANSITION
+/* Áp dụng hiệu ứng chuyển đổi cho thuộc tính chiều rộng trong 0.5 giây */
+transition: width 0.5s;
+
+/* Áp dụng hiệu ứng chuyển đổi cho nhiều thuộc tính */
+transition: all 0.3s ease-in-out;
+
+/* Trì hoãn hiệu ứng chuyển đổi 1 giây */
+transition: transform 1s ease-in 1s;
+-------------
+TRANSFORM
+/* Dịch chuyển phần tử 50px sang phải và 20px xuống dưới */
+transform: translate(50px, 20px);
+
+/* Xoay phần tử 45 độ */
+transform: rotate(45deg);
+
+/* Co dãn phần tử theo chiều ngang gấp 2 lần */
+transform: scaleX(2);
+
+/* Co dãn phần tử theo cả chiều ngang và chiều dọc */
+transform: scale(1.5, 0.5);
+---------
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: transform 0.5s;
+}
+
+.box:hover {
+    transform: scale(1.2); /* Tăng kích thước khi hover */
+}
