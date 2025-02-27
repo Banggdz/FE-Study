@@ -1,0 +1,537 @@
+.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="header">
+        <div class="header-top">
+            Due to the COVID 19 epidemic, orders may be processed with a slight delay
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="inner-wrap">
+                    <div class="inner-logo">
+                        <a href="/">
+
+                            <img src="image/logo.png" alt="Logo">
+                            <span>CureM4</span>
+                        </a>
+                    </div>
+                    <div class="inner-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Products</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-contact">
+                        Need help? 989-879-0847
+                    </div>
+                    <div class="inner-social">
+                        <ul>
+                            <li>
+                                <a href="#"target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"target="_blank"><i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-menu-mobi"><i class="fa-solid fa-bars"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!---- END HEADER-->
+   <!-- Section one -->
+    <div class="section-one">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-content">
+                    <h1 class="inner-title">
+                        Antivirus
+                        <br>
+                        Mask Store
+                    </h1>
+                    <p class="inner-des">The easiest way to protect yourself</p>
+                    <div class="inner-list">
+                        <div class="inner-item">
+                            <i class="fa-solid fa-shield-dog"></i></i>
+                            <span>Anti-Bacterial</span>
+                        </div>
+                        <div class="inner-item">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            <span>Anti-Virus</span>
+                        </div>
+                    </div>
+                    <a href="#" class="button button-two">Shop now</a>
+                </div>
+                <div class="inner-image">
+                    <img src="image/product1.jpg" alt=""/>
+                    <div class="inner-sale">
+                        <span>only</span>
+                        <span>$25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section-two -->
+     <div class="section-two">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-box">
+                    <img src="/bai-01/nguyen-huu-bang/image/1.jpeg"alt="">
+                    <div class="inner-content">
+                        <div class="inner-tag">
+                            NEW
+                        </div>
+                        <h3 class="inner-title">Antivirus Mask</h3>
+                        <a href="#"class="button button-one">More</a>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <img src="/bai-01/nguyen-huu-bang/image/2.jpg"alt="">
+                    <div class="inner-content">
+                        <h3 class="inner-title">Basic<br>Mask</h3>
+                    <div class="inner-sale">-30%</div>
+                    <a href="#" class="button button-one">
+                        Shop now
+                    </a>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <img src="/bai-01/nguyen-huu-bang/image/3.jpg"alt="">
+                    <div class="inner-content">
+                    <h3 class="inner-title">Medical Mask</h3>
+                    <div class="inner-price-new">$15.99</div>
+                    <div class="inner-price-old">$29.99</div>
+                    <a href="#"class="button button-one">Shop now</a>
+                </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!--End Section-two -->
+
+     <!-- Section Three -->
+     <div class="section-three">
+        <div class="container">
+            <div class="inner-head">
+                <h2 class="inner-title">
+                    Effective and reliable protection for your
+                </h2>
+                <p class="inner-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div class="inner-wrap">
+                <div class="inner-box">
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="inner-title">
+                        Anti-Virus
+                    </h3>
+                    <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+                <div class="inner-box">
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                    </div>
+                    <h3 class="inner-title">
+                        Anti-Bacterial
+                    </h3>
+                    <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+                <div class="inner-box">
+                    <div class="inner-icon">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="inner-title">
+                        Safety
+                    </h3>
+                    <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- End Section Three -->
+</body>
+</html>
+-------------------
+reset.css
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/*# sourceMappingURL=normalize.min.css.map */
+------------------
+base.css
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --color-one:#103178;
+    --color-two:#FEC700;
+    --color-text:#586C8E;
+    --font:'Inria Serif',serif;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:var(--font);
+    color: var(--color-text);
+}
+.container{
+    width:100%;
+    max-width:1140px;
+    margin-left:auto;
+    margin-right:auto;
+}
+a{
+    text-decoration: none;
+}
+
+---------------
+style.css
+.header{
+    box-shadow:0px 1px 3px 0 rgb(0 0 0 /10%) ;
+}
+.header-top{
+    background: var(--color-one);
+    color:var(--color-two);
+    font-size: 10px;
+    padding:8px;
+    text-align: center;
+}
+.header-main .inner-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 0px;
+}
+.header-main .inner-logo img{
+    height:40px;
+    width:auto;
+    margin-right: 10px;
+    
+}
+.header-main .inner-logo span{
+    font-size: 22px;
+    font-weight: 1000;
+}
+.header-main .inner-logo a{
+    color:var(--color-one);
+    display:flex;
+    align-items:center;
+}
+.header-main .inner-menu ul{
+    list-style-type: none;
+    display:flex;
+    margin:0;padding:0;
+}
+.header-main .inner-menu ul li a{
+    color:var(--color-one);
+    font-size:18px;
+}
+.header-main .inner-menu ul li{
+    margin-left:15px;
+    margin-right:15px
+}
+.header-main .inner-contact{
+    font-size:18px;
+    color:var(--color-text);
+}
+.header-main .inner-social ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    display: flex;
+}
+.header-main .inner-social ul li a{
+   color:var(--color-one);
+   font-size: 26px;
+}
+.header-main .inner-menu-mobi{
+    display:none;
+}
+@media (max-width:768px){
+    .header-top{
+        font-size:16px;
+    }
+}
+@media (max-width:992px){
+    .header-main .inner-contact{
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    .header-main .inner-menu{
+        display:none;
+    }
+    .header-main .inner-social{
+        display:none;
+    }
+    .header-main .inner-menu-mobi{
+        display: block;
+        font-size:24px;
+        color:var(--color-one);
+    }
+
+}
+.header-main .inner-social ul li{
+    margin-left:15px;
+}
+/* button */
+.button{
+    background: var(--color-text);
+    color:#fff;
+    padding:12px 32px;
+    font-size:18px;
+    border-radius: 45px;
+    border: 2px solid var(--color-text);
+    display: inline-block;
+}
+.button:hover{
+    color:var(--color-text);
+    background: #fff;
+}
+.button-two{
+    background:var(--color-two);
+    border-color:var(--color-two);
+}
+.button-two:hover{
+    color:var(--color-two);
+}
+.button-one{
+    background:var(--color-one);
+    border-color:var(--color-one);
+}
+.button-one:hover{
+    color:var(--color-one);
+}
+/* End Button */
+/* Section One */
+.section-one{
+    background: #EFF1F4;
+    padding:100px 0;
+}
+.section-one .inner-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-one .inner-content{
+    width:50%;
+}
+.section-one .inner-image{
+    width:50%;
+    
+    position: relative;
+}
+.section-one .inner-image img{
+    width:100%;
+}
+.section-one .inner-image .inner-sale{
+    position: absolute;
+    top:0;right:150px;
+    background: var(--color-two);
+    color:var(--color-one);
+    display: flex;
+    width:120px;height:120px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.section-one .inner-image .inner-sale span:nth-child(1){
+    font-size: 22px;font-weight: 600;
+}
+.section-one .inner-image .inner-sale span:nth-child(2){
+    font-size: 42px;font-weight: 600;
+}
+.section-one .inner-content .inner-title{
+    color: var(--color-one);
+    font-size:60px;
+}
+.section-one .inner-content .inner-des{
+    color: var(--color-one);
+    font-size:20px;
+    margin-bottom:30px;
+}
+.section-one .inner-content .inner-list{
+    display: flex;
+    margin-bottom:40px;
+}
+.section-one .inner-content .inner-item{
+    display:flex;
+    width: 50%;
+    align-items: center;
+}
+.section-one .inner-content .inner-item i{
+    font-size:24px;
+    margin-right:10px;
+}
+@media (max-width:992px){
+    .section-one .inner-content{
+        width:100%;
+        order:1;
+    }
+    .section-one .inner-image{
+        width:100%
+    }
+}
+@media (max-width:768px){
+    .section-one .inner-content{
+        text-align:center;
+    }
+    .section-one .inner-content .inner-item{
+        justify-content: center;
+    }
+    .section-one .inner-image .inner-sale{
+        right:36px;width:84px;height:84px;
+    }
+    .section-one .inner-image .inner-sale span:nth-child(1){
+        font-size:16px;
+    }
+    .section-one .inner-image .inner-sale span:nth-child(2){
+        font-size:28px;
+    }
+    .section-one .inner-image .inner-title{
+        font-size:38px;
+    }
+}
+
+/* End Section One */
+/* Section two  */
+.section-two{
+    padding:100px 0;
+}
+.section-two .inner-box{
+    width:calc(100%/3 - 20px);
+    height:100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+}
+.section-two .inner-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.section-two img{
+    width: 200px;
+}
+.section-two .inner-box img{
+    width:100%;height: 100%;
+    /* object-fit:ảnh tự co dãn hết width/height mà ko bị vỡ  */
+    object-fit: cover;
+    transition: all 0,6s;
+}
+.section-two .inner-box:hover img{
+    transform: scale(1.1);
+}
+.section-two .inner-box .inner-content{
+    position:absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    padding:20px;
+}
+.section-two .inner-box .inner-tag{
+    background: #139F5D;
+    display:inline-block;
+    padding:6px 12px;
+    border-radius: 15px;
+    color:#fff;
+    margin-bottom: 10px;
+}
+.section-two .inner-box .inner-title{
+    margin-top:0;
+    font-size: 24px;
+    color:#fff;
+    margin-bottom:20px;
+}
+/*End Section two  */
+@media (max-width:992px){
+    .section-two .inner-wrap{
+        flex-wrap:wrap;
+    }
+    .section-two .inner-box{
+        width:100%;
+        aspect-ratio: 2/1;
+        margin-bottom:30px;
+    }
+}
+@media (max-width:576px){
+    .section-two .inner-box{
+        aspect-ratio: 1/1;
+    }
+}
+@media (max-width:1200px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width:576px){
+    .container{
+        max-width:100%;
+        padding-left:15px;padding-right:15px;
+    }
+}
+/* <!-- Section Three --> */
+.section-three{
+    background: #F0F2F5;
+    padding:100px 0;
+}
+.section-three .inner-head .inner-title{
+    font-size: 60px;
+    color:var(--color-one);
+    margin:0;
+}
+.section-three .inner-head .inner-desc{
+    font-size: 24px;
+    margin:0;
+}
+.section-three .inner-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.section-three .inner-box{
+    text-align: center;
+    width:calc(100% / 3);
+}
+/* <!-- End Section Three --> */
