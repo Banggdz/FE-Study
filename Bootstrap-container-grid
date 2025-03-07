@@ -57,7 +57,17 @@ CLASS .CONTAINER
       margin-bottom: 10px;
     }
   </style>
-  
+  -----------------------------
+.container: Giúp element căn đều 2 lề và có độ rộng tối đa là 1140px.
+Có padding-left và padding-right là 15px.
+Các kích thước của .container ở các màn hình có kích thước khác nhau:
+---------------------------------
+.container-fluid: Có độ rộng full màn hình (kéo dài từ trái sang phải)
+Có padding-left và padding-right là 15px.
+Các kích thước của .container-fluid ở các màn hình có kích thước khác nhau:
+
+
+GRID:Lưới
   <div class="section-two">
     <div class="container-fluid">
       <div class="row">
@@ -84,4 +94,141 @@ CLASS .CONTAINER
       </div>
     </div>
   </div>
+  ----------------
+MEDIA QUERY của Bootstrap cho PC First
+/* Kích thước nhỏ hơn 1200px */
+@media (max-width: 1199.98px) {
+  /* Code… */
+}
+
+/* Kích thước nhỏ hơn 992px */
+@media (max-width: 991.98px) {
+  /* Code… */
+}
+
+/* Kích thước nhỏ hơn 768px */
+@media (max-width: 767.98px) {
+  /* Code… */
+}
+
+/* Kích thước nhỏ hơn 576px */
+@media (max-width: 575.98px) {
+  /* Code… */
+}
+-------------------
+ <div class="section-one">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="inner-box">
+            <i class="fa-solid fa-display"></i>
+            <h3 class="inner-title">
+              Lorem Ipsum
+            </h3>
+            <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis diam at libero aliquam, sed vestibulum elit feugiat.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="inner-box">
+            <i class="fa-solid fa-display"></i>
+            <h3 class="inner-title">
+              Lorem Ipsum
+            </h3>
+            <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis diam at libero aliquam, sed vestibulum elit feugiat.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="inner-box">
+            <i class="fa-solid fa-display"></i>
+            <h3 class="inner-title">
+              Lorem Ipsum
+            </h3>
+            <p class="inner-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis diam at libero aliquam, sed vestibulum elit feugiat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-two">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="inner-head">
+            <h2 class="inner-title">
+              ABOUT US
+            </h2>
+            <p class="inner-desc">
+              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+            </p>
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-12 inner left">
+                <div class="inner-content">
+                  Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit.
+Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+
+01
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12">
+                <div class="inner-image">
+                  <img src="https://bootstrapmade.com/content/demo/Green/assets/img/about.jpg" alt="anh gioi thieu">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  <div class="alert alert-secondary" role="alert">
+    A simple secondary alert—check it out!
+  </div>
+  <div class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+  <div class="alert alert-warning" role="alert">
+    A simple warning alert—check it out!
+  </div>
+  <div class="alert alert-info" role="alert">
+    A simple info alert—check it out!
+  </div>
+  <div class="alert alert-light" role="alert">
+    A simple light alert—check it out!
+  </div>
+  <div class="alert alert-dark" role="alert">
+    A simple dark alert—check it out!
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
   
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
+
