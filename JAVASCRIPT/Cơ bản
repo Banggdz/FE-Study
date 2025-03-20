@@ -1,0 +1,101 @@
+Kiểu Object
+Object là kiểu dữ liệu tham chiếu. Có thể hiểu object là một tập hợp gồm các cặp key - value (khóa - giá trị).
+Kiểu dữ liệu của key có thể là string hoặc symbol.
+Value ứng với key có thể là bất kỳ kiểu dữ liệu nào.
+Có 2 loại là Object và Array.
+Ví dụ về Object
+	var infoUser = {
+	     name: "Le Van A",
+	     age: 18,
+	     email: "levana@gmail.com",
+	     phone: "0987654321",
+      sum: function(a,b){
+                alert(a+b);
+            }
+	}
+ 
+ infoUser.sum(2,3);
+	console.log(infoUser.age);
+
+Ví dụ về Array
+	var listUser = [
+	   "Le Van A",
+	   "Nguyen Thi B",
+	   "Do Van C"
+     function(a,b){
+        alert(a+b);
+     }
+	]
+ //listUser.sum = function(a,b){
+        alert(a+b);
+     }
+     listUser.sum(2,3);//
+	console.log(listUser);
+	console.log(listUser[0]);
+ listUser[3](2,3);
+
+---Hàm confirm()
+confirm("Bạn đã đủ 18 tuổi ?");
+ var result= confirm("Bạn đã đủ 18 tuổi ?");
+    if(result==true) console.log("Bạn được mua bia")
+    else console.log("Bạn chưa đủ tuổi")
+---Hàm prompt()
+prompt("Nhập vào tên của bạn:", "Tên");
+ var result=prompt("Nhập vào tên của bạn:", "");
+alert(result);
+---Hàm console
+Dùng để in ra nội dung ở tab console trên dev tools.
+Có 3 hàm hay sử dụng là:
+console.log(): in ra thông báo
+console.warn(): in ra cảnh báo
+console.error(): in ra lỗi
+Nghiên cứu thêm tại: https://developer.mozilla.org/en-US/docs/Web/API/console
+---Hàm setTimeout
+Code sẽ chạy 1 lần duy nhất sau một khoảng thời gian.
+Cú pháp:
+	setTimeout(function() {
+	    // Code
+	}, time)
+
+setTimeout(function(){
+        console.log("hết 5 giây");
+    },5000)
+---Hàm setInterval
+Code sẽ chạy lặp lại sau một khoảng thời gian.
+Cú pháp:
+	setInterval(function() {
+	    // Code
+	}, time)
+Ví dụ:
+var counter=0;
+setInterval(function() {
+    console.log(counter);
+        counter++;
+},3000)
+
+---Các toán tử typeof cho phép trả về kiểu của một biến.
+
+   console.log(typeof a); // number
+console.log(typeof b); // string
+console.log(typeof (a + b)); // string
+console.log(typeof c); // undefined
+console.log(typeof d); // object
+console.log(typeof e); // boolean
+console.log(typeof a == "number"); // true
+
+--- indexOf()
+Tìm vị trí đầu tiên của một chuỗi nằm trong một chuỗi.
+Nếu không tìm thấy sẽ trả về -1.
+Có phân biệt chữ hoa, chữ thường.
+Cú pháp: string.indexOf(searchvalue, start)
+Trong đó:
+searchvalue: Giá trị cần tìm kiếm (bắt buộc).
+start: Vị trí bắt đầu tìm kiếm (tính từ trái qua phải) và sẽ tìm kiếm xuôi tiếp (mặc định bắt đầu từ 0).
+Ví dụ:
+	var myString = `Xin chào! Tôi tên Nam. Tôi năm nay 18 tuổi.`;
+	console.log(myString.indexOf("Tôi")); // Trả về 10
+	console.log(myString.indexOf("Nam")); // Trả về 18
+	console.log(myString.indexOf("nam")); // Trả về -1
+	console.log(myString.indexOf("Tôi", 11)); // Trả về 23
+
+
