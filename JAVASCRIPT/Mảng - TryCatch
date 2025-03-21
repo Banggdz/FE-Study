@@ -1,0 +1,52 @@
+	const tinhTong=(){
+        let tong=0;
+        for(item of arguments){
+            tong+=item;
+        }
+        return tong;
+    }
+const tinhTong=()=>{
+        console.log("ok");
+    }
+const tinhTong = (...args) => {
+        console.log(args);
+        let tong=0;
+        for(item of args){
+            tong+=item;
+        }
+        return tong;
+    }
+    var kq=tinhTong(1,3,2,4,3);
+    console.log(kq);ư
+---
+var mang=[1,2,3,4,5,6,7,8,9,10];
+    function tongSoChan(array){
+        let tong=0;
+        for(const item of array){
+            if(item%2==0){
+                tong+=item;
+            }
+        }
+        return tong;
+    }
+    var kq=tongSoChan(mang);
+    console.log(kq);
+---
+function tinhBieuThuc(n){
+        let kq=0;
+        for(let  i=1;i<=n;i++){
+            kq+=i/n;
+        }
+        return kq;
+    }
+
+    do{
+        n=prompt("Nhập n");
+        n=parseInt(n);
+        if(n<=0) alert-2("Vui lòng nhập số lớn hơn 0")
+        else{ 
+            let kq=tinhBieuThuc(n);
+            console.log(kq);
+        }    
+    }
+    while(n<=0)
