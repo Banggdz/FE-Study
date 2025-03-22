@@ -50,3 +50,68 @@ function tinhBieuThuc(n){
         }    
     }
     while(n<=0)
+
+---
+const monHoc=[
+    {
+        ten:"Toan",
+        diem:8.6
+    },
+    {
+        ten:"Ly",
+        diem:9.2
+    },
+    {
+        ten:"Hoan",
+        diem:8.5
+    },
+    {
+        ten:"Tin",
+        diem:3.9
+    },
+    {
+        ten:"Tin",
+        diem:7.9
+    },
+   ]
+   const hsg=monHoc.every(function(item){
+    return item.diem>=8;
+   });
+   const dup=monHoc.some(function(item){
+    return item.diem<=4;
+   });
+   const diemTin=monHoc.find(function(item){
+    return item.ten=="Tin";
+   });
+   console.log(hsg);
+   console.log(dup);
+   console.log(diemTin);
+   console.log(diemTin.diem)
+   const xemdiemTin=monHoc.filter(function(item){
+    return item.ten=="Tin";
+   });
+   console.log(xemdiemTin)
+---map
+let hocLuc=monHoc.map(item=>{
+    return item;
+});
+console.log(hocLuc)
+let ds=monHoc.map(item=>{
+    let hocLuc="";
+    if(item.diem>=8) hocLuc="Gioi";
+    else hocLuc="Kha";
+    return {
+        ten:item.ten,
+        hocLuc:hocLuc
+    };
+});
+----reduce()
+arr.reduce(function(total, currentValue, currentIndex, array) {
+	    // code xử lý
+	}, initialValue);
+
+let numbers=[1,2,3,4,5,6,7,8,9,10];
+let tong=numbers.reduce((total,item )=> {
+    console.log(total);
+    return total+item;
+});
