@@ -1,0 +1,82 @@
+ console.log(window);
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    function openTab(){
+        tab=window.open("http://127.0.0.1:5500/bai-15%20js-1/tmp.html","_blank","width=1200,height=600,top=200,left=200");
+    }
+    function closeTab(){
+        tab.close();
+    }
+console.log(window.location);
+    let href=window.location.href;
+    setTimeout(()=>{
+        console.log(href);
+    },4000);
+
+<zone onclick="openTab()">Open new tab</zone>
+    <button onclick="closeTab()">Dong tab</button>
+    <button onclick="reloadWeb()">Tai lai</button>
+    <script>
+    console.log(window.location);
+   function reloadWeb(){
+    window.location.reload();
+   }
+--
+ function setCookie(cname,cvalue,exdays){
+            var d=new Date();
+            d.setTime(d.getTime()+(exdays*24*60*60*1000));
+            var expires="expires="+d.toUTCString();
+            document.cookie=cname+"="+cvalue+"; "+expires;
+        }
+        function getCookie(cname){
+            var name=cname+"=";
+            var ca=document.cookie.split(';');
+            for(var i=0;i<ca.length;i++){
+                var c=ca[i];
+                while(c.charAt(0)==' '){
+                    c=c.substring(1);
+                }
+                if(c.indexOf(name)==0){
+                    return c.substring(name.length,c.length);
+                }
+            }
+            return "";
+        }
+        function deleteCookie(cname){
+            document.cookie=`${cname}=;expires=Thu,01 Jan 1970 00:00:00 UTC`;
+        }
+---
+ function login(){
+            if(true){
+                //document.cookie = 'token=test;expires=expires=Thu,01 Jan 2026 00:00:00 UTC';
+                document.cookie = 'email=name@gmail.com';
+                document.cookie = 'fullName=Dang phuong nam';//
+
+                setCookie("sdt","0932043",1);
+                setCookie("email","name@gmail.com",1);
+                setCookie("fullName","Dang phuong nam",1);
+            }
+}
+function deleteInfor(){
+            deleteCookie("email");
+            deleteCookie("fullName")
+        }
+function updateInfor(){
+            document.cookie='email=test@gmail.com';
+}
+
+<zone onclick="openTab()">Open new tab</zone>
+    <button onclick="closeTab()">Dong tab</button>
+    <button onclick="reloadWeb()">Tai lai</button>
+    <button onclick="login()">Login</button>
+    <button onclick="updateInfor()">Update</button>
+    <button onclick="deleteInfor()">Delete</button>
+
+        let allCookie=document.cookie;
+        console.log(allCookie);
+        let email=getCookie("email");
+        let sdt=getCookie("sdt");
+        let fullName=getCookie("fullName");
+        console.log(email);
+        console.log(sdt);
+        console.log(fullName);
