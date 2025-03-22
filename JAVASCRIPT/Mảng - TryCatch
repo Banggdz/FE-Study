@@ -115,3 +115,7 @@ let tong=numbers.reduce((total,item )=> {
     console.log(total);
     return total+item;
 });
+let tb=numbers.reduce((total,item )=> {
+    console.log(total);
+    return total+item/numbers.length;
+},0);
