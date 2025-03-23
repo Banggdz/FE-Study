@@ -1,0 +1,130 @@
+--------------DOM ELEMENT--------------
+<style>
+        .light{
+            background: lightblue;
+        }
+        .dark{
+            background: darkblue;
+            color:#fff;
+        }
+        .test-2{
+            color:blue;
+        }
+    </style>
+     <div class="light"id="box">Nội dung thẻ div</div>
+    <ul id="menu">
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ul>
+    <h2>Thẻ h2 1</h2>
+    <h2>Thẻ h2 2</h2>
+    <h2>Thẻ h2 3</h2>
+    <h2>Thẻ h2 4</h2>
+    <h2>Thẻ h2 5</h2>
+
+    <h3 class="class">Thẻ 1</h3>
+    <h3 class="class">Thẻ 2</h3>
+    <h3 class="class">Thẻ 3</h3>
+    <h3 class="class">Thẻ 4</h3>
+    <h3 class="class">Thẻ 5</h3>
+    <script>
+        // console.log(document)
+        const box=document.getElementById("box");
+        box.classList.add("dark");
+        console.log(box);
+
+        const menu=document.getElementById("menu");
+        console.log(menu);
+        const listh2=document.getElementsByTagName("h2");
+        console.log(listh2);
+        console.log(listh2[2])
+
+        const list=document.getElementsByClassName("class");
+        console.log(list);
+        
+        // console.log([...list]);
+        [...list].forEach(item=>console.log(item));
+        [...list].forEach(item=>{
+            item.classList.add("test-2");
+            item.classList.remove("class");
+        });
+    </script>
+
+------
+<style>
+        .box-1 .box-2 h2 .link{
+            background-color: yellow;
+        }
+        .box-1 .box-2 h2 .link.active{
+            background-color: orange;
+        }
+    </style>
+
+    <div class="box-1">
+        <div class="box-2">
+            <h2>
+                <a href="#"class="link">Noi dung the a</a>
+            </h2>
+            <h2>
+                <a href="#"class="link">Noi dung the a</a>
+            </h2>
+        </div>
+    </div>
+
+    <script>
+        const element=document.querySelector(".box-1 .box-2 h2 .link");
+        element.classList.add("active");
+        console.log(element);
+
+        const elements=document.querySelectorAll(".box-1 .box-2 h2 .link");
+        [...elements].forEach(item=> {
+            item.classList.add("active");
+        });
+    </script>
+const list=document.getElementsByClassName("class");
+        console.log(list);
+
+        console.log(...list);
+        console.log([...list]);
+        [...list].forEach(item=>{
+            item.classList.add("test-2");
+            item.classList.remove("class");
+        });
+
+
+------------------DOM HTML----------------------
+<h2 id="h2">
+    <span>Noi dung the h2</span>
+    <span>Noi dung the h2</span>
+    <span>Noi dung the h2</span>
+    <span>Noi dung the h2</span>
+</h2>
+<div id="box">a</div>
+    <script>
+        const h2=document.querySelector("#h2")
+        const contentH2=h2.innerHTML;
+        console.log(contentH2);
+        const contenth2=h2.textContent;
+        console.log(contenth2);
+        const box=document.querySelector("#box");
+        console.log(box);
+    </script> 
+ const productList=document.querySelectorAll(".product-item");
+
+        let cart=[];
+        [...productList].forEach(item=>{
+            const dataID=item.getAttribute("data-id");
+            console.log(dataID);
+            cart.push(dataID);
+            item.setAttribute("data-category","234");
+            item.setAttribute("class","product-test");
+        });
+---------------DOM CSS------------
+ <h3 id="h3">Nội dung thẻ h3</h3>
+    <script>
+        const h3=document.querySelector("#h3");
+        h3.style.color="red";
+        h3.style.backgroundColor="yellow";
+        console.log(h3);
+    </script>
