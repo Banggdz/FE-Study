@@ -1,0 +1,185 @@
+------------DOM EVENTS------------------------------------------------------------------------------------
+<!-- <input type="text"id="inputName"placeholder="Nhap">
+ <h3 id="h3">Nội dung thẻ h3</h3> -->
+ <style>
+    /* .focus{
+        background: yellow;
+    } */
+ </style>
+    <!-- <script>
+        const inputName=document.querySelector("#inputName");
+        inputName.onblur=function(){
+            inputName.value=inputName.value.toUpperCase();
+            inputName.classList.remove("focus");
+        }
+        inputName.onfocus=function(){
+            inputName.classList.add("focus");
+        }
+        inputName.onkeydown=function(){
+            console.log("onkeydown");
+            alert("onkeydown");
+        }
+        inputName.onkeyup=function(){
+            console.log("onkeyup");
+            alert("onkeyup");
+        }
+        window.onload=function(){
+            const menu=document.querySelector("#menu");
+            console.log(menu);
+        }
+    </script>
+    <ul id="menu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul> -->
+    <!-- <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        /* khi element co 2 class  */
+        .menu.show{
+            display: block;
+        }
+        .menu{
+            background: orange;
+            width: 250px;
+            position: fixed;
+            top:0;left:0;
+            height:100vh;
+            display: none;
+        }
+        .menu ul{
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+        .menu ul li{
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+        }
+        .button{
+            position: absolute;
+            top:20px;
+            right:20px;
+        }
+        .menu .inner-close{
+            position: absolute;
+            top:0;
+            right:0;
+        }
+    </style>
+    <div class="menu"id="menu">
+        <button class="inner-close" id="buttonClose">
+            Close
+        </button>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+
+        </ul>
+    </div>
+    <button class="button" id="buttonMenu">menu</button>
+
+    <script>
+        const buttonMenu=document.querySelector("#buttonMenu");
+        const buttonClose=document.querySelector("#buttonClose");
+        const menu=document.querySelector("#menu");
+        buttonMenu.onclick=function(){
+            menu.classList.add("show");
+        };
+        buttonClose.onclick=function(){
+            menu.classList.remove("show");
+        };
+    </script> -->
+<!-- 
+    <input type="text" id="inputName"placeholder="Ho va ten">
+    <script>
+        const inputName=document.querySelector("#inputName");
+        inputName.onchange=function(){
+            console.log(inputName.value);
+        }
+    </script> -->
+
+------------DOM EVENTS LISTENER---------------------------------------------------------------------------
+
+<button id="button">Button</button>
+
+    <script>
+        function hamMot(){
+            console.log("viec 1");
+        }
+        function hamHai(){
+            console.log("viec 2");
+        }
+        const button=document.querySelector("#button");
+        // button.onclick=function(){
+        //     hamMot();
+        // }
+        // button.addEventListener("click",function(){
+        //     hamMot();
+        // });
+        // button.addEventListener("click",function(){
+        //      hamHai();
+        // });
+        button.addEventListener("click",hamMot);
+        button.addEventListener("click",hamHai);
+
+        setTimeout(()=>{
+            button.removeEventListener("click",hamHai);
+        },5000);
+    </script>
+
+
+<div class="parent">
+        <div class="child-1" id="child-1">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+        <div class="child-2">Child 2</div>
+        <div class="child-2">Child 3</div>                                                                                        
+    </div>
+
+    <script>
+        const childOne=document.querySelector("#child-1");
+        // console.log(childOne);
+        // console.log(childOne.parentNode);
+        // console.log(childOne.childNodes);
+        // console.log(childOne.parentNode.parentNode);
+        // console.log(childOne.querySelectorAll(".box"));
+
+        // console.log(childOne.nextElementSibling);
+        // console.log(childOne.previousElementSibling);
+        // console.log(childOne.nodeName);
+
+        const parent=document.querySelector(".parent");
+        console.log(parent.querySelectorAll(".box"));
+    </script>
+
+
+    <div id="ads"></div>
+    <script>
+        // const div=document.createElement("div");
+        // div.innerHTML="Quang cao";
+        // console.log(div);
+
+        // const divAds=document.querySelector("#ads");
+        // divAds.appendChild(div);
+
+        // setInterval(()=>{
+        //     const divAds=document.querySelector("#ads");
+        //     divAds.appendChild(div);
+        // },3000);
+        const div=document.createElement("div");
+        const text=document.createTextNode("Quang cao 2...");
+        div.appendChild(text);
+        console.log(div);
+
+        const divAds=document.querySelector("#ads");
+        divAds.appendChild(div);
+    </script>
