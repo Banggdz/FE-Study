@@ -183,3 +183,31 @@
         const divAds=document.querySelector("#ads");
         divAds.appendChild(div);
     </script>
+
+ <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    <button id="buttonAdd">ADD</button>
+    <script>
+        const menu=document.querySelector("#menu");
+        const buttonAdd=document.querySelector("#buttonAdd");
+
+        buttonAdd.onclick=function(){
+            const firstElement=menu.firstElementChild;
+            const newItem=document.createElement("li");
+            newItem.innerHTML="Item moi";
+            // menu.appendChild(newItem);
+            menu.insertBefore(newItem,firstElement);
+        }
+        const listItem=menu.querySelectorAll("li");
+        listItem.forEach(item => {
+            item.onclick=function(){
+                // menu.removeChild(item);
+
+                const newItem=document.createElement("li");
+                newItem.innerHTML="item moi";
+                menu.replaceChild(newItem,item);
+            }
+        });
