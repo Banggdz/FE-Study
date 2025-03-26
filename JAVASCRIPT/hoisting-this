@@ -1,0 +1,49 @@
+<!-- <button id="button">Button</button>
+    <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    </button> -->
+    <script>
+    //    const button=document.querySelector("#button");
+    //    button.addEventListener("click",function(){
+    //     console.log(this);
+    //    })
+
+    const listItem=document.querySelectorAll("#menu li");
+    // console.log(listItem);
+    // [...listItem].forEach(function(item){
+    //     item.addEventListener("click",function(){
+    //         console.log(this);
+    //         console.log(item);
+    //         console.log(item);
+    //         console.log(item);
+    //     })
+    // });
+
+    [...listItem].forEach(function(item){
+        item.addEventListener("click",()=>{
+            // khong ap dung duoc this cho arrow function
+            console.log(this);
+        })
+    });
+    let info={
+        fullName:"Dang phuong Nam",
+        age:18,
+        email:"abc@gmail.com",
+        getFullName:function(){
+            console.log(info.fullName);
+            console.log(this.fullName);
+        },
+        cccd:{
+            fullName:"Dang phuong Nam",
+            address:"duong xyz,so123",
+            getInfoCCCD:function(){
+                console.log(this.fullName);
+            }
+        }
+    };
+    info.getFullName();
+    info.cccd.getInfoCCCD();
+    </script>
