@@ -1,0 +1,47 @@
+TINHTOAN.JS
+export function tong(a,b){
+    return a+b;
+}
+export function hieu(a,b){
+    return a-b;
+}
+export function tich(a,b){
+    return a*b;
+}
+export function thuong(a,b){
+    return a/b;
+}
+export default function thongBao(){
+    return "thong bao..";
+}
+
+// export {tong as to,hieu as hi,tich as ti,thuong as th};
+---
+main.js
+
+import {sum} from "./sum.js";
+import {a,b} from "./constant.js";
+// import { hieu, th, ti, tong } from "./tinhtoan.js";
+import { hieu,thuong as th,tich as ti,tong as to } from "./tinhtoan.js";
+import thongBao from "./tinhtoan.js";
+let c=sum(a,b);
+console.log(c);
+console.log(to(a,b));
+console.log(hieu(a,b));
+console.log(ti(a,b));
+console.log(th(a,b));
+console.log(thongBao());
+---
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
