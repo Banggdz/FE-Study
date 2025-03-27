@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="listUser"class="user-list"></div>
+    <script>
+        // Vi du 1:JSON co gia tri la object
+        // let infoUser={
+        //     fullName:"nguyen van a",
+        //     email:"abc@gmail.com",
+        //     age:18,
+        // };
+        // let infoUserJSOL=`{
+        //     "fullName":"nguyen van a",
+        //     "email":"abc@gmail.com",
+        //     "age": 18
+        // }`;
+        // let infoUserJSONtoJS=JSON.parse(infoUserJSOL);
+        // let infoUserJStoJSON=JSON.stringify(infoUser);
+        // console.log(infoUserJSONtoJS);
+        // console.log(infoUserJStoJSON);
+
+        // Vi du 2:JSON co gia tri la number 
+        // let jsonumber=`5`;
+        // console.log(jsonumber);
+        // console.log(JSON.parse(jsonumber));
+
+        // Vi du 3:JSON co gia tri la string 
+        // let jsonstring=`"xin chao"`;
+        // console.log(jsonstring);
+        // console.log(JSON.parse(jsonstring));
+
+        // Vi du 4:JSON co gia tri la Boolean 
+        // let jsonboolean=`true`;
+        // console.log(jsonboolean);
+        // console.log(JSON.parse(jsonboolean));
+        
+        // Vi du 5:JSON co gia tri la Array
+        // let jsonArray=`
+        // [
+        //     {
+        //     "id":1,
+        //     "name":"nguyen van a",
+        //     "email":"abc@gmail.com"
+        // },
+        // {
+        //     "id":2,
+        //     "name":"nguyen van b",
+        //     "email":"abc@gmail.com"
+        // },
+        // {
+        //     "id":3,
+        //     "name":"nguyen van c",
+        //     "email":"abc@gmail.com"
+        // }
+        // ]
+        // `;
+        // let lisUser=JSON.parse(jsonArray);
+        // let htmls="";
+        // lisUser.forEach(item => {
+        //     htmls +=`
+        //         <div class="user-item">
+        //             <div class="inner-name">${item.name}</div>
+        //             <div class="inner-email">${item.email}</div>
+        //         </div>
+        //     `;
+        // });
+        // const divUserList=document.querySelector("#listUser");
+        // divUserList.innerHTML=htmls;
+        // console.log(htmls);
+
+        // Vi du 5:JSON co gia tri NULL 
+        //  
+    </script>
+</body>
+</html>
