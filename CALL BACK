@@ -1,0 +1,67 @@
+<body>
+    <script src="CALLBACK.js"></script>
+</body>
+// function ham1(callback){
+//     console.log("Ham 1");
+//     // console.log(callback);
+//     callback();
+// }
+// function ham2(){
+//     console.log("Ham 2");
+// }
+// ham1(ham2);
+function kiemTraSoDuong(so){
+    if(so>=0){
+        console.log("Day la so duong");
+    }
+    else console.log("day la so am");
+}
+function kiemTraChanLe(so){
+    if(so%2==0){
+        console.log("Day la so chan");
+    }
+    else console.log("day la so le");
+}
+function tong(a,b,callback){
+    let kq=a+b;
+    console.log(kq);
+    callback(kq);
+}
+tong(10,20,kiemTraChanLe);
+
+--------------------------theo kieu Module---------------------------
+---index.html
+<body>
+    <script type="module"src="CALLBACK.js"></script>
+</body>
+
+--tong.js
+export function tong(a,b,callback){
+    let kq=a+b;
+    console.log(kq);
+    callback(kq);
+}
+
+---kiemtrachanle.js
+export function kiemTraChanLe(so){
+    if(so%2==0){
+        console.log("Day la so chan");
+    }
+    else console.log("day la so le");
+}
+
+---kiemtrasoduong
+export function kiemTraSoDuong(so){
+    if(so>=0){
+        console.log("Day la so duong");
+    }
+    else console.log("day la so am");
+}
+
+---CALLBACK.js
+import { kiemTraChanLe } from "./kiemTraChanLe.js";
+import { kiemTraSoDuong } from "./kiemTraSoDuong.js";
+import { tong } from "./tong.js";
+tong(10,20,kiemTraChanLe);
+tong(10,20,kiemTraSoDuong);
+
