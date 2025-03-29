@@ -1,0 +1,111 @@
+<body>
+    <div id="category">
+    </div>
+    <!-- <script src="promise.js"></script> -->
+    <script src="fetch.js"></script>
+</body>
+
+--FETCH.JS--
+fetch(`https://dummyjson.com/products`)
+
+.then(response=>response.json())
+.then(data=>{
+    console.log(data);
+    let htmls="";
+    data.products.forEach(item => {
+        htmls+=`<div class="category-item">${item.title}</div>`;
+    });
+    console.log(htmls);
+    const divCategory=document.querySelector("#category");
+    divCategory.innerHTML=htmls;
+})
+// fetch('https://dummyjson.com/comments')
+// .then(res => res.json())
+// .then(console.log);
+.catch(error => {
+    console.error("Lỗi:", error);
+});
+
+// GET CATEGORY 
+fetch(`https://dummyjson.com/products/categories`)
+
+.then(response=>response.json())
+.then(data=>{
+    console.log(data);
+    let htmls="";
+    data.forEach(item => {
+        htmls+=`<div class="category-item">${item.name}</div>`;
+    });
+    console.log(htmls);
+    const divCategory=document.querySelector("#category");
+    divCategory.innerHTML=htmls;
+    
+})
+.catch((error)=>{
+    console.log(error);
+});
+
+----
+//GET PRODUCT
+fetch("https://dummyjson.com/products")
+.then(response=>response.json())
+.then(data=>{
+    let htmls="";
+    console.log(data);
+    data.products.forEach(item=>{
+        htmls+=`<div class="product-item">
+            <img src="${item.thumbnail}"alt="${item.title}f">
+            <h3>${item.title}</h3>
+            <p>${item.price}</p>
+        </div>`
+    });
+   const divProducts=document.querySelector("#products");
+   divProducts.innerHTML=htmls;
+})
+--Viet ham rieng---
+const fetchAPi=(url)=>{
+    const result=fetch(url)
+    .then(response=>response.json())
+    .then(data=>{
+        return data;
+    });
+    return result;
+}
+fetchAPi("https://dummyjson.com/products/categories")
+.then(data=>{
+    let htmls="";
+    data.forEach(item => {
+        htmls+=`<div class="category-item">${item.name}</div>`;
+    });
+    const divCategory=document.querySelector("#category");
+    divCategory.innerHTML=htmls;
+    
+})
+---Async Await---
+
+const fetchApiAsyncAwait = async()=>{
+    const response=await fetch("https://dummyjson.com/products/categories");
+    const result=await response.json();
+    // console.log(response);
+
+    // neu ko co await se ra pending
+    // console.log(result);
+    return result;
+}
+
+const test=fetchApiAsyncAwait();
+console.log(test);
+
+fetchApiAsyncAwait("https://dummyjson.com/products")
+.then(data=>{
+    let htmls="";
+    data.products.forEach(item=>{
+        htmls+=`<div class="product-item">
+            <img src="${item.thumbnail}"alt="${item.title}f">
+            <h3>${item.title}</h3>
+            <p>${item.price}</p>
+        </div>`
+    });
+   const divProducts=document.querySelector("#products");
+   divProducts.innerHTML=htmls;
+})
