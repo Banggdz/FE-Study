@@ -1,0 +1,1 @@
+npm init -> npm i json-server ->(phải tạo file database.json và paste dữ liệu vào)json-server --watch database.json
