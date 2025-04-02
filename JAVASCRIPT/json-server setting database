@@ -1,1 +1,6 @@
 npm init -> npm i json-server ->(phải tạo file database.json và paste dữ liệu vào)json-server --watch database.json
+
+Bước 1: Gõ lệnh npm -v trên cmd để kiểm tra xem cài đặt thành công chưa (Npm được tích hợp sẵn trong nodejs, nên chỉ cần cài đặt nodejs là được, nếu chưa cài đặt thì vào trang https://nodejs.org/en/).
+Bước 2: Gõ lệnh npm init, sau đó cứ bấm enter đến hết.
+Nếu là project mới cần chạy câu lệnh này. Câu lệnh này sẽ tạo ra 1 file có tên là package.json – file này để lưu trữ thông tin (tên package, phiên bản, các dependencies) mà project của bạn sử dụng.
+Bước 3: Gõ lệnh npm install [tên package] hoặc npm i [tên package]. Để cài đặt package vào dự án.
