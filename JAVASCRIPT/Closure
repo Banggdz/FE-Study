@@ -1,0 +1,57 @@
+// const c=10;
+// const tinhToan=()=>{
+//     const c=20;
+//     const tong=(a,b)=>{
+//         const c=30;
+//         return a+b+c;
+//     }
+//     const hieu=(a,b)=>{
+//         return a-b;
+//     }
+//     const tich=(a,b)=>{
+//         return a*b;
+//     }
+//     const thuong=(a,b)=>{
+//         return a/b;
+//     }
+//     return{
+//         sum:tong,
+//         hieu:hieu,
+//         tich:tich,
+//         thuong:thuong
+//     };
+// };
+
+// const tt=tinhToan();
+// console.log(tt);
+// console.log(tt.sum(20,30));
+// console.log(tt.tich(20,30));
+
+// const info=()=>{
+//     let fullName="Dang phuong nam";
+
+//     const getFullName=()=>{
+//         return fullName;
+//     }
+//     const setFullName=(string)=>{
+//         fullName=string;
+//     }
+
+//     return{
+//         get:getFullName,
+//         set:setFullName
+//     };
+// }
+// const infoUser=info();
+// console.log(infoUser);
+// console.log(infoUser.get());
+// console.log(infoUser.set("No name"));
+// console.log(infoUser.get());
+
+const a=10;
+const b=20;
+const c=a+b;
+
+// const string="Kết quả của "+ a +" + " + b + " = " + c + ".";
+const string =`Kết quả của ${a} + ${b} = ${c}`;
+console.log(string)
