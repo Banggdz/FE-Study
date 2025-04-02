@@ -1,0 +1,60 @@
+<head>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <input type="text" name="email"placeholder="nhap email">
+    <button id="send">Gui</button> 
+    <button id="clear">Xoa</button>
+    <button id="up">Tang</button>
+    <button id="clearAll">Xoa Tat Ca</button>
+
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+
+const input=document.querySelector("input");
+const buttonSend=document.querySelector("#send");
+const buttonClear=document.querySelector("#clear");
+const resultDiv=document.querySelector("#result");
+const buttonUp=document.querySelector("#up");
+const buttonClearAll=document.querySelector("#clearAll");
+
+buttonSend.addEventListener("click",()=>{
+    const name=input.name;
+    let value=input.value;
+    if(value){
+        localStorage.setItem(name,value);
+        const email=localStorage.getItem("email");
+        resultDiv.innerHTML=email;
+    }
+});
+
+buttonClear.addEventListener("click",()=>{
+    localStorage.removeItem("email");
+    resultDiv.innerHTML="";
+});
+let count=0;
+buttonUp.addEventListener("click",()=>{
+    // 2 cach viet 
+    localStorage.setItem("key"+count+"test",`value${count}`);
+    let value=localStorage.getItem("key"+count+"test");
+    let newElement=document.createElement("p");
+    newElement.innerHTML=value;
+    resultDiv.appendChild(newElement);
+    count++;
+    
+})
+
+buttonClearAll.addEventListener("click",()=>{
+    localStorage.clear();
+});
+// for(const key in localStorage){
+//     console.log(key);
+// }
+for(let i=0;i<localStorage.length;i++){
+    const key=localStorage.key(i);
+    const value=localStorage.getItem(key);
+    console.log(key,value);
+};
+
+sessionStorage.setItem("token","fkeowiajdsdsp");
