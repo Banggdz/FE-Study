@@ -1,0 +1,93 @@
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits[0]);
+// fruits.sort();
+console.log(fruits);
+console.log(fruits.length);
+let text="<ul>";
+// for(let i=0;i<fruits.length;i++){
+//   // text+="<li>"+fruits[i]+"</li>"
+//   text+=`<li>${fruits[i]}</li>`
+// }
+
+// fruits.forEach(myFunction);
+// function myFunction(value){
+//     text+="<li>"+value+"</li>";
+// }
+// text+="</ul>";
+// document.getElementById("demo").innerHTML=text;
+
+// fruits.pop();
+// fruits.push("vl");
+// fruits[fruits.length]="kiwi";
+// let fruit=fruits.pop();
+// let fruit=fruits.shift();
+// fruits.unshift("lemon");
+// slices out a piece of an array.
+// const citrus = fruits.slice(1);
+
+// The first parameter (2) defines the position where new elements should be added (spliced in).
+// The second parameter (0) defines how many elements should be removed.
+// fruits.splice(2, 0, "Lemon", "Kiwi");
+fruits.splice(2, 1);
+
+document.getElementById("demo").innerHTML=fruits.join(" ");
+// document.writeln(citrus);
+
+---------------------Duyet mang---------
+
+-The forEach() method calls a function (a callback function) once for each array element.
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+function myFunction(value,index,array){
+    txt+=value+" "+index+"<br>";
+}
+document.getElementById("demo").innerHTML=txt;
+
+-The map() method creates a new array by performing a function on each array element.
+The map() method does not execute the function for array elements without values.
+The map() method does not change the original array.
+
+const numbers2 = numbers.map(myFunction);
+function myFunction(value, index, array) {
+  return value * 2;
+}
+-The reduce() method runs a function on each array element to produce (reduce it to) a single value.(tra ve 1 gia tri duy nhat nhu tong,hieu..)
+The reduce() method works from left-to-right in the array. See also reduceRight().
+The reduce() method does not reduce the original array.
+
+
+
+-The filter() method creates a new array with array elements that pass a test.
+
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+--
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+let someOver18 = numbers.some(myFunction);
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+---Arrays const
+An array declared with const cannot be reassigned:
+const cars = ["Saab", "Volvo", "BMW"];
+cars = ["Toyota", "Volvo", "Audi"];  
+The keyword const is a little misleading.
+It does NOT define a constant array. It defines a constant reference to an array.
+Because of this, we can still change the elements of a constant array. 
+chi const thamchieu(dia chi) nen ko the thay doi dia chi cua mang(tuc thay bang mang khac)chi thay doi duoc phan tu trong mang
