@@ -1,0 +1,8 @@
+<details>
+        <summary>Nhấn để xem nội dung</summary>
+        <p>Đây là nội dung hiện ra khi ấn vào</p>
+    </details>
+    <!-- Hiển thị quá trình của 1 tác vụ -->
+     <progress value="70"max="100"></progress>
+     <!-- Gía trị đo lường trong 1 khoảng nhất định -->
+      <meter value="5"min="0"max="10"></meter>
