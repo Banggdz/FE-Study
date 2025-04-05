@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        text-align: center;
+    }
+    .i1,.i2{
+        width: 100px;
+        margin:20px;
+    }
+    .i1{
+        /* đổ bóng theo trục x,y,độ mờ,màu bóng */
+        filter:drop-shadow(10px 10px 7px blue)
+    }
+    .i2{
+        box-shadow: 10px 10px 10px blueviolet;
+    }
+</style>
+<img class="i1" src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/hinh-anime-2.jpg" alt="">
+<img class="i2" src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/hinh-anime-2.jpg" alt="">
+
+</html>
+
+drop-shadow:0Aps dụng theo hình dạng thục của phần tử
+box-shadow:Aps dụng theo hình chử nhật của hộp
