@@ -11,6 +11,9 @@ Khi logic chỉ là một biểu thức duy nhất, bạn có thể bỏ  và t�
 const sum = (a, b) => a + b;
 console.log(sum(3, 5)); // Kết quả: 8
 
+const errors=document.querySelectorAll('.error');
+errors.forEach(error=>error.textContent='')
+
 **Không cần từ khóa  và dấu  nếu chỉ có một dòng xử lý
 3. Arrow Function với 1 tham số:
 Nếu hàm chỉ có một tham số, bạn có thể bỏ luôn dấu ngoặc tròn .
