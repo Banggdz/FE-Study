@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    body{
+        background: linear-gradient(135deg,#667eea,#764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .form-container{
+        background-color: white;
+        padding:25px 30px;
+        border-radius: 10px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 400px;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+        color:#333;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    label{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color:#555;
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        border:1px solid #ccc;
+        border-radius: 5px;
+        outline:none;
+        transition: border-color 0.3s;
+    }
+    input:focus{
+        border-color: #667eea;
+    }
+    button{
+        width: 100%;
+        padding:10px;
+        background-color: #667eea;
+        color:white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: ;
+    }
+    button:hover{
+        background-color: #5555d6;
+    }
+    .error{
+        color:red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+</style>
+
+
+<div class="form-container">
+    <h2>Sign Up</h2>
+<form action="#"method="POST"id="signup-form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text"id="username"placeholder="Enter name">
+        <span class="error"></span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text"id="email"placeholder="Enter Email">
+        <span class="error"></span>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text"id="password"placeholder="Enter Password">
+        <span class="error"></span>
+    </div>
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="text"id="confirm-password"placeholder="Enter confirm your password">
+        <span class="error"></span>
+    </div>
+    <button type="submit">Sign up</button>
+</form>
+</div>
+
+<script>
+    document.getElementById("signup-form").addEventListener('submit',function(e){
+        e.preventDefault(); 
+        
+    let isValid=true;
+    const username=document.getElementById('username');
+    const email=document.getElementById('email');
+    const password=document.getElementById('password');
+    const confirmPassword=document.getElementById('confirmPassword');
+    
+    const errors=document.querySelectorAll('.error');
+    errors.forEach(error=>error.textContent='');
+
+    if(username.value.trim()==''){
+        showError(username,'Tên đăng nhập không được để trống');
+        isValid=false;
+    }
+    if(email.value.trim()==''){
+        showError(email,'Email không được để trống');
+        isValid=false;
+    }
+
+    if(password.value.trim()==''){
+        showError(password,'Mật khẩu không được để trống');
+        isValid=false;
+    }else if(password.value.length<6){
+        showError(password,'Mật khẩu phải có ít nhất 6 kí tự');
+        isValid=false;
+    }
+
+    if (confirmPassword.value.trim() == '') {
+    showError(confirmPassword, 'Mật khẩu xác nhận không được để trống');
+    isValid = false;
+} else if (confirmPassword.value.trim() != password.value.trim()) {
+    showError(confirmPassword, 'Mật khẩu xác nhận không khớp');
+    isValid = false;
+}
+if(isValid){
+    alert('Đăng kí thành công');
+}
+});
+    function showError(input,message){
+        const errorElement=input.nextElementSibling;
+        errorElement.textContent=message;
+    }
+    function validateEmail(email){
+        const re=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(email);
+    }
+</script>
+</body>
+</html>
