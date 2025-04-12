@@ -44,6 +44,16 @@ Thuộc tính for của thẻ <label> phải bằng thuộc tính id của phầ
     <footer class="footer">
         Footer
     </footer>
+
+Giá trị của thuộc tính for phải trùng với giá trị của thuộc tính id của phần tử liên kết.
+<form>
+  <label for="username">Tên người dùng:</label>
+  <input type="text" id="username" name="username">
+  
+  <label for="password">Mật khẩu:</label>
+  <input type="password" id="password" name="password">
+</form>
+
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
         <input name="Họ tên" type="password>
         <input type="submit" value="Gửi">
