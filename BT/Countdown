@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            background: linear-gradient(45deg,#0f2027,#203a43,#2c5364);
+            color:white;
+            margin:0;
+            padding:20px;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+        /* Dong ho dem nguoc  */
+        #countdown{
+            font-size:80px;
+            font-weight: bold;
+            margin-top:50px;
+            transition: transform 0.5s;
+        }
+        /* Khi so thay doi,hieu ung phong to */
+        .animate{
+            transform: scale(1.2);
+        }
+    </style>
+    <h1>Đồng hồ đếm ngược</h1>
+    <div id="countdown">10</div>
+
+    <script>
+        // So bat dau dem nguoc
+        let count=10;
+        let countdownElement=document.getElementById('countdown');
+
+        // Ham cap nhat so dem nguoc moi giay
+         countdown=setInterval(()=>{
+            count--;
+            countdownElement.textContent=count;
+            countdownElement.classList.add("animate");
+
+            setTimeout(()=>{
+                countdownElement.classList.remove("animate");
+            },500);
+            if(count===0){
+                clearInterval(countdown);
+                countdownElement.textContent='End';
+            }
+        },1000)
+    </script>
+</body>
+</html>
