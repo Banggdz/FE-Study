@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+            background-color: #f4f4;
+            color:#333;
+            transition: background 0.5s ease,color 0.5s ease;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+        }
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            transition: color 0.5s ease;
+        }
+        /* Nut chuyen doi dang switch  */
+        .toggle-switch{
+            position: relative;
+            width: 80px;
+            height:40px;
+        }
+        .toggle-switch input{
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider{
+            position: absolute;
+            cursor: pointer;
+            top:0;left:0;right:0;bottom:0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider::before{
+            content:"🌞";
+            position: absolute;
+            height:34px;width:34px;
+            left:3px;bottom:3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked+.slider{
+            background-color: #010a01;
+            color:white;
+        }
+        input:checked+.slider::before{
+            transform: translateX(40px);
+            content:"🌙";
+        }
+        .dark-mode{
+            background-color: #181818;
+            color:#f4f4f4;
+        }
+        #btn-text{
+            font-size: 10px;
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+        <h1 id="text">Light mode</h1>
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle-btn">
+            <span class="slider"id="btn-text">Switch Dark Mode</span>
+        </label>
+    </div>
+    <script>
+        // 1/Lay cac phan tu HTML can thao tac 
+        
+        // Nut chuyen che do 
+        const toggleBtn=document.getElementById("toggle-btn");
+        //The <body> dung de thay doi mau nen
+        const body=document.body;
+        // Dong chu hien thi trang thai
+        const text=document.getElementById("text");
+        // bieu tuong mat trang hoac mat troi 
+        // const icon=document.getElementById("icon");
+        // Noi dung nut bam 
+        const btnText=document.getElementById("btn-text");
+        toggleBtn.addEventListener("change",function(){
+            body.classList.toggle("dark-mode");
+            if(body.classList.contains("dark-mode")){
+                localStorage.setItem("darkMode", "enabled");
+                text.textContent="Dark Mode";
+                btnText.textContent="Switch Light Mode";
+            }
+            else  {
+                localStorage.setItem("darkMode", "disabled");
+                text.textContent="Light Mode";
+                btnText.textContent = "Switch Dark Mode";
+            }
+        })
+
+        // Kiểm tra trạng thái DARK MODE trong local storage 
+        // Nếu DARKMODE được lưu là "enable",bật chế độ tối khi tải lại trang 
+        if(localStorage.getItem("darkMode")==="enabled"){
+            body.classList.add("dark-mode");
+            text.textContent="Dark Mode";
+            // btnText.textContent="Turn off Dark Mode";
+            localStorage.setItem("darkMode","enabled");
+            toggleBtn.checked=true;
+            btnText.textContent="Switch Light Mode";
+        }
+        else{
+            body.classList.remove("dark-mode");
+            text.textContent="Light Mode";
+            // btnText.textContent="Turn on Dark Mode";
+            localStorage.setItem("darkMode","disabled");
+            toggleBtn.checked=false;
+
+        }
+
+    </script>
+</body>
+</html>
