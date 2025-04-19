@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+    <style>
+        
+        body{
+            min-height: 100vh;
+            font-family: Roboto;
+            background-image:
+                linear-gradient(to bottom right,#EFD7F4,#c5c7f1);
+            margin:0;
+        }
+        .container{
+            background-color: #E9E0F7;
+            max-width: 95%;
+            margin:50px auto 0;
+            border-radius: 10px;
+        }
+        .filter{
+            padding:20px;
+            display: grid;
+            grid-template-columns: 32.667% 32.667% 32.667%;
+            column-gap:1%;
+        }
+        .filter .item{
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+        .filter .item select,.filter .item input,.filter .item button{
+            width: 100%;
+            padding:5px;
+            border:none;
+            background-color: transparent;
+            border-left:1px solid #ddd;
+            outline: none;
+        }      
+        .filter .item label{
+            display: block;
+            width: 40%;
+            padding:0 10px;
+        }
+        .filter .item.submit button{
+            background-color: #AA82ED;
+            color:#fff;
+        }
+        .countResults{
+            font-size: xx-large;
+            text-align: center;
+            padding:20px;
+        }
+        #list{
+            padding:20px;
+            display: grid;
+            column-gap: 1%;
+            grid-template-columns: 32.66% 32.66% 32.66%;
+        }
+        #list .item img{
+            width: 90%;
+            height: 300px;
+            object-fit: cover;
+            margin:20px 0;
+            border-radius: 10px;
+        }
+        #list .item{
+            background-color: #fff5;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #list .item .title{
+            font-weight: bold;
+        }
+        #list .item .price{
+            color:#F5B976;
+            letter-spacing: 1px;
+            padding: 20px;
+        }
+
+    </style>
+    <div class="container">
+        <form class="filter">
+            <div class="item">
+                <label for="">Category</label>
+                <select name="category" id="">
+                    <option value="">---</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="Shirt">Shirt</option>
+                    <option value="Polo">Polo</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="">Color</label>
+                <select name="color" id="">
+                    <option value="">---</option>
+                    <option value="white">white</option>
+                    <option value="black">black</option>
+                    <option value="grey">grey</option>
+                    <option value="blue">blue</option>
+                    <option value="brown">brown</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="">Name</label>
+                <input type="text"name=name>
+            </div>
+            <div class="item">
+                <label for="">Min price</label>
+                <input type="number"name="minPrice">
+            </div>
+            <div class="item">
+                <label for="">Max price</label>
+                <input type="number"name="maxPrice">
+            </div>
+            <div class="item submit">
+                <button>Search</button>
+            </div>
+        </form>
+            <div class="countResults">
+                Found <b id="count">0</b> results
+            </div>
+            <div id="list">
+                <!-- <div class="item">
+                    <img src="img/doli.jpg">
+                    <div class="title">Name Product</div>
+                    <div class="price">323.000 đ</div>
+                </div><div class="item">
+                    <img src="img/doli.jpg">
+                    <div class="title">Name Product</div>
+                    <div class="price">323.000 đ</div>
+                </div><div class="item">
+                    <img src="img/doli.jpg">
+                    <div class="title">Name Product</div>
+                    <div class="price">323.000 đ</div>
+                </div> -->
+            </div>
+        
+    </div>
+
+    <script>
+        
+let list=document.getElementById('list');
+let filter=document.querySelector('.filter');
+let count=document.getElementById('count');
+let listProducts=[
+    {
+        id:1,
+        name:'Airi',
+        price:205600,
+        quantity:10,
+        image:'img/airi.jpg',
+        nature:{
+            color:['white','black'],
+            size:['S','M','L'],
+            type:'T-shirt'
+        }
+    },
+    {
+        id:2,
+        name:'Alice',
+        price:300000,
+        quantity:30,
+        image:'img/alice.jpg',
+        nature:{
+            color:['white','black','grey'],
+            size:['S','M','L'],
+            type:'Polo'
+        }
+    },
+    {
+        id:3,
+        name:'Aya',
+        price:400000,
+        quantity:30,
+        image:'img/aya.jpg',
+        nature:{
+            color:['blue','black'],
+            size:['S','M','L'],
+            type:'Shirt'
+        }
+    },
+    {
+        id:4,
+        name:'Doli',
+        price:205600,
+        quantity:20,
+        image:'img/doli.jpg',
+        nature:{
+            color:['white','black'],
+            size:['S','M','L'],
+            type:'T-shirt'
+        }
+    },
+    {
+        id:5,
+        name:'Qi',
+        price:32000,
+        quantity:30,
+        image:'img/qi.jpg',
+        nature:{
+            color:['brown'],
+            size:['S','M','L'],
+            type:'T-shirt'
+        }
+    },
+    {
+        id:6,
+        name:'Nata',
+        price:100000,
+        quantity:0,
+        image:'img/nata.jpg',
+        nature:{
+            color:['white','black'],
+            size:['S','M','L'],
+            type:'T-shirt'
+        }
+    },
+];
+let productFilter=listProducts;
+showProduct(productFilter);
+function showProduct(productFilter){
+    count.innerText=productFilter.length;
+    list.innerHTML='';
+    productFilter.forEach(item => {
+        let newItem=document.createElement('div');
+        newItem.classList.add('item');
+        let newImage=new Image();
+        newImage.src=item.image;
+        newItem.appendChild(newImage);
+
+        let newTitle=document.createElement('div');
+        newTitle.classList.add('title');
+        newTitle.innerText=item.name;
+        newItem.appendChild(newTitle);
+
+        let newPrice=document.createElement('div');
+        newPrice.classList.add('price');
+        newPrice.innerText=item.price.toLocaleString()+'đ'; 
+        newItem.appendChild(newPrice);
+
+        list.appendChild(newItem);
+    });
+}
+
+filter.addEventListener('submit',function(e){
+    // ngan load lai trang khi xay ra event nay 
+    e.preventDefault();
+    let valueFilter=event.target.elements;
+    console.log(valueFilter);
+    productFilter=listProducts.filter(item=>{
+
+        if(valueFilter.category.value!=''){
+            if(item.nature.type!=valueFilter.category.value){
+                return false;
+            }
+        }
+        if(valueFilter.color.value!=''){
+            if(!item.nature.color.includes(valueFilter.color.value)){
+                return false;
+            }
+        }
+        if(valueFilter.name.value!=''){
+            if(!item.name.includes(valueFilter.name.value)){
+                return false;
+            }
+        }
+        if(valueFilter.minPrice.value!=''){
+            if(item.price<valueFilter.minPrice.value) return false;
+        }
+        if(valueFilter.maxPrice.value!=''){
+            if(item.price>valueFilter.maxPrice.value) return false;
+        }
+        return true;
+
+    })
+    showProduct(productFilter);
+})
+    </script>
+</body>
+</html>
