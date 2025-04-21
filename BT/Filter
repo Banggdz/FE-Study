@@ -145,10 +145,6 @@
     </div>
 
     <script>
-        
-let list=document.getElementById('list');
-let filter=document.querySelector('.filter');
-let count=document.getElementById('count');
 let listProducts=[
     {
         id:1,
@@ -223,7 +219,11 @@ let listProducts=[
         }
     },
 ];
+let list=document.getElementById('list');
+let filter=document.querySelector('.filter');
+let count=document.getElementById('count');
 let productFilter=listProducts;
+
 showProduct(productFilter);
 function showProduct(productFilter){
     count.innerText=productFilter.length;
