@@ -69,7 +69,7 @@
             color:white;
         }
         input:checked+.slider::before{
-            transform: translateX(40px);
+            transform: translateX(43px);
             content:"🌙";
         }
         .dark-mode{
