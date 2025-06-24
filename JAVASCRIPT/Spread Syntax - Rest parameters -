@@ -1,0 +1,51 @@
+// const sum=(a=1,b=2)=>{
+//     return a+b;
+// };
+// console.log(sum(1));
+
+// SPREAD SYNTAX
+
+// const a1=[1,2,3];
+// const a2=[4,5,6];
+// const a3=[1,2,3,4,5,6];
+// const a4=[...a1,...a2];
+// console.log(...a1);
+// console.log(...a2);
+// console.log(a4);
+
+
+// let infoDate={
+//     phone:"0123456",
+//     age:18
+// }
+// let infoFinal={
+//     ...info,...infoDate  
+// };
+// console.log(infoFinal)
+
+// REST PARAMETERS
+
+// const sum=(...numbers)=>{
+//     console.log(numbers);
+//     const result=numbers.reduce((total,item)=>{
+//         return total+item;
+//     },0);
+//     return result;
+// };
+// console.log(sum(10,20,30,40,50));
+
+//Destructing
+ 
+let info={
+    name:"dang phuong",
+    email:"wd@"
+}
+console.log(info.name);
+console.log(info.name);
+console.log(info.name);
+
+const {name,email}=info;
+
+console.log(name);
+console.log(name);
+console.log(name);
