@@ -1,0 +1,56 @@
+--------CounterState---------
+import { useState } from "react"
+
+function CounterState(){
+    const [counter,setCounter]=useState(0);
+    return(
+        <>
+        <div>Ket qua: {counter}</div>
+       <button onClick={()=>setCounter(counter+1)}>Up</button>
+       <button onClick={()=>setCounter(counter-1)}>Down</button>
+       <button onClick={()=>setCounter(0)}>Reset</button>
+        </>
+    )
+}
+export default CounterState
+
+---------ProductState----------
+import {useEffect, useState} from 'react';
+function ProductState(){
+    const [products,setProducts]=useState();
+    const [loading,setLoading]=useState(true);
+    useEffect(()=>{
+        const fetchApi=()=>{
+            fetch("https://dummyjson.com/product?limit=100")
+            .then(res=>res.json())
+            .then(data=>{
+                setProducts(data.products);
+                setLoading(false);
+            })
+        }
+        setTimeout(()=>{
+            fetchApi();
+        },20000);
+        
+    },[]);
+    console.log(products);
+    return(
+        <>
+            
+        {/* {products?(
+            <ul>
+                {products.map(item=>(
+            <li key={item.id}>{item.title}</li>
+        ))} 
+        </ul>):(<>Loading</>)} */}
+        {loading?(
+            
+            <>Loading</>):(<ul>
+                {products.map(item=>(
+            <li key={item.id}>{item.title}</li>
+        ))} 
+        </ul>)}
+        </>
+    )
+}
+export default ProductState
