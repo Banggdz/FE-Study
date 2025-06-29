@@ -84,4 +84,95 @@ function CouterReducer(){
     )
 }
 export default CouterReducer
+----------TODOS----------
+import { useEffect, useReducer,useRef } from "react";
+
+const init = [
+  {
+    id: 1,
+    content: "Thứ 2 học HTML"
+  },
+  {
+    id: 2,
+    content: "Thứ 3 học CSS"
+  },
+  {
+    id: 3,
+    content: "Thứ 4 học JS"
+  }
+];
+// STATE la mang todo
+// action la object do dispatch gui len 
+const reducer=(state,action)=>{
+    console.log(state,action);
+    switch(action.type){
+        case "CREATE":
+        return[
+            ...state,
+            {
+                id:Date.now(),
+                content:action.value
+            }
+        ];
+        case "DELETE":
+            const newState=state.filter(a=>a.id!=action.id);
+            console.log(newState);
+            return newState;    
+        default:
+            return state;
+    } 
+   
+}
+
+
+function Todos(){
+    const [todos,dispatch]=useReducer(reducer,init);
+    const inputRef=useRef();
+    
+    useEffect(()=>{
+        console.log(inputRef);
+        inputRef.current.focus();
+    },[])
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(e.target[0].value);
+        let value=e.target[0].value;
+        if(value){
+            dispatch({
+                type:"CREATE",
+                value:value
+            })
+        }
+        inputRef.current.value="";
+    }
+
+    const handleDelete=(e)=>{
+        console.log(e);
+        dispatch({
+            type:"DELETE",
+            id:e
+        })
+    }
+    return(
+
+        <>
+        <form onSubmit={handleSubmit}>
+            <input ref={inputRef} name="inputTodo">
+            </input>  
+            <button>ADD</button>
+        </form>
+        {todos.length>0&&(
+            <ul>
+                {todos.map(item=>(
+                    <li key={item.id}>
+                        {item.content}
+                        <button onClick={()=>{handleDelete(item.id)}}>DELETE</button>
+                    </li>
+                ))}
+            </ul>
+        )}
+        </>
+    )
+}
+export default Todos
 
