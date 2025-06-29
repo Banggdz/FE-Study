@@ -1,0 +1,53 @@
+import {useEffect, useReducer, useState} from 'react';
+
+const init={
+    products:[],
+    loading: true
+};
+const reducer=(state,action)=>{
+    console.log(state,action);
+    if(action.type==="SUCCESS"){
+        return{
+            products: action.products,
+            loading:false
+        };
+    }
+    else return state;
+}
+function ProductReducer(){
+// data khởi tạo = init
+// gửi action vào dispatch
+// hàm reducer nhận action từ dispatch
+// state là giá trị của data
+    const [data,dispatch]=useReducer(reducer,init);
+    useEffect(()=>{
+        const fetchApi=()=>{
+            fetch("https://dummyjson.com/product?limit=100")
+            .then(res=>res.json())
+            .then(data=>{
+                // setProducts(data.products);
+                 // setLoading(false);
+                dispatch({
+                    type:"SUCCESS",
+                    products:data.products
+                });
+            })
+        }
+        setTimeout(()=>{
+            fetchApi();
+        },2000);
+        
+    },[]);
+    console.log(data);
+    return(
+        <>
+        {data.loading?(
+            <>Loading</>):(<ul>
+                {data.products.map(item=>(
+            <li key={item.id}>{item.title}</li>
+        ))} 
+        </ul>)}
+        </>
+    )
+}
+export default ProductReducer
