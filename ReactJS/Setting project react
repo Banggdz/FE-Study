@@ -1,0 +1,5 @@
+Bước 1: Cài đặt Node.js trước. Chỉ cần cài 1 lần duy nhất, nếu máy tính đã cài rồi thì không cần cài nữa.
+Bước 2: Gõ lệnh npm install -g create-react-app. Chỉ cần cài 1 lần duy nhất. Create-react-app là cách để đơn giản hóa quá trình cài đặt và cấu hình môi trường.
+Bước 3: Gõ lệnh npx create-react-app ten-du-an. Để tạo mới một dự án ReactJS.
+Bước 4: Gõ lệnh cd ten-du-an. Để đi vào thư mục dự án.
+Bước 5: Gõ lệnh npm start. Để khởi chạy dự án.
