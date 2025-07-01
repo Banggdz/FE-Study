@@ -1,0 +1,4 @@
+view chứa button (UP,DOWN,RESET) Khi người dùng click vào button,gửi acton trong button lên dispatch 
+dispatch lấy action đó truyền vào Reducer,Reducer là hàm xử lí logic
+Sau khi xử lí xong lưu data vào Store và trả về State 
+State gửi lại view để render giao diện và gửi lại vào reducer để lưu vào Store
