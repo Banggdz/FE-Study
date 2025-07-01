@@ -1,0 +1,272 @@
+-----------------------APP----------------------------
+import logo from './logo.svg';
+import './App.css';
+import Product from './Components/Product';
+// bài 33 phút 1:45
+function App() {
+  return (
+    <>
+      <Product/>
+    </>
+  );
+}
+
+export default App;
+----------------index.js(trong folder Product)--------
+import ProductList from "./ProductList";
+import './Product.css'
+import CreateProduct from "./CreateProduct";
+import { useEffect, useState } from "react";
+
+function Product(){
+    // biến reload để kiểm tra nếu reload thay đổi thì render (trong useEffect)
+    const [reload,setReload]=useState(false);
+    const handleReload=()=>{
+        setReload(!reload);
+    }
+    return(
+        <>
+        <h2>Danh sach san pham</h2>
+            <CreateProduct onReload={handleReload}/>
+            <ProductList reload={reload}/>
+            
+        </>
+    )
+}
+export default Product
+
+
+-------------------ProductList.js---------------------
+import { useEffect, useState } from "react"
+import EditProduct from "./EditProduct";
+import DeleteProduct from "./DeleteProduct";
+
+function ProductList(props){
+    const [data,setData]=useState([]); 
+    const [editReload,setEditReload]=useState(false);
+    const handleReload=()=>{
+        setEditReload(!editReload);
+    }
+    // khi productlist render thi useEffect ko bi render ai (chi render 1 lan duy nhat dau tien)
+    useEffect(()=>{
+        const fetchApi=async()=>{
+            const response=await fetch('http://localhost:3000/products')
+            const result = await response.json();
+            setData(result.reverse());
+        }
+        fetchApi();
+    },[props.reload,editReload])
+    return(
+        <>
+            <div className="product__list">
+                {data.map(item=>(
+                    <div className="product__item">
+                        <div className="product__image">
+                           <img src={item.thumbnail} alt={item.title} />
+                        </div>
+                            <h4>{item.title}</h4>
+                            <p>{item.price}</p>
+                            <p>{item.discountPercentage}</p>
+                        <EditProduct item={item} onReload={handleReload}/>
+                        <DeleteProduct item={item} onReload={handleReload}/>
+                    </div>
+                ))}
+            </div>
+        </>
+    )
+}
+export default ProductList
+-------------------EditProduct.js---------------------
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
+
+function EditProduct(props) {
+    const { item } = props;
+    console.log(item);
+    const [showModal, setShowModal] = useState(false);
+    const [data, setData] = useState(item);
+    const [dataCategory, setDataCategory] = useState([]);
+    useEffect(() => {
+        const fetchApi = async () => {
+            fetch('http://localhost:3000/category')
+                .then(res => res.json())
+                .then(data => {
+                    setDataCategory(data);
+                })
+        }
+        fetchApi();
+    }, []);
+    function openModal() {
+        setShowModal(true);
+    }
+    function closeModal() {
+        setShowModal(false);
+    }
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch(`http://localhost:3000/products/${item.id}`, {
+            method: "PATCH",
+            headers: {
+                Accept: "application/json", "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    setShowModal(false);
+                    props.onReload();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Cập nhật thành công",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setData({
+            ...data,
+            [name]: value
+        });
+    }
+
+
+    return (
+        <>
+            <button onClick={openModal}>+ Chỉnh sửa</button>
+            <Modal
+                isOpen={showModal}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <form onSubmit={handleSubmit}>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Tiêu đề</td>
+                                <td>
+                                    <input 
+                                    type="text" 
+                                    name="title" 
+                                    onChange={handleChange} 
+                                    value={data.title}
+                                    required></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Danh mục</td>
+                                <td>
+                                    <select value={data.category}  name="category" onChange={handleChange} required>
+                                        {dataCategory.map((item, index) => (
+                                            <option key={index} value={item} >{item}</option>
+                                        ))}
+
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Giá</td>
+                                <td>
+                                    <input value={data.price} type='text' name="price" onChange={handleChange}></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Giảm giá</td>
+                                <td>
+                                    <input value={data.discountPercentage} type='text' name="discountPercentage" onChange={handleChange}></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số lượng còn lại</td>
+                                <td>
+                                    <input value={data.stock} type='text' name="stock" onChange={handleChange}></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Đường dẫn ảnh</td>
+                                <td>
+                                    <input value={data.thumbnail} type='text' name="thumbnail" onChange={handleChange}></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mô tả</td>
+                                <textarea value={data.description} rows={4} name="description" onChange={handleChange}></textarea>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button onClick={closeModal}>Hủy</button>
+                                </td>
+                                <td>
+                                    <input type="submit" value="Cập nhật"></input>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </Modal>
+        </>
+    )
+}
+export default EditProduct
+-------------------DeleteProduct.js-------------------
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+function DeleteProduct(props){
+    const handleClick=()=>{
+        Swal.fire({
+  title: "Bạn có chắc không ?",
+  text: "Bạn không thể hoàn tác !",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  cancelButtonText:"Hủy",
+  confirmButtonText: "Chắc chắn !"
+}).then((result) => {
+  if (result.isConfirmed) {
+     fetch(`http://localhost:3000/products/${props.item.id}`, {
+                method: "DELETE",
+            })
+                .then(res => res.json())
+                .then(() => {
+                    props.onReload();
+                    
+                })
+    Swal.fire({
+      title: "Đã xóa !",
+      text: "Bạn đã xóa thành công.",
+      icon: "success"
+    });
+  }
+});
+    }
+
+    return (
+        
+        <>
+            <button onClick={handleClick}>Xóa</button>
+        </>
+    )
+}
+export default DeleteProduct
