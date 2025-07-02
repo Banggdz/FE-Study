@@ -7,6 +7,7 @@ function FocusInput() {
 
   const handleClick = () => {
     inputRef.current.focus(); // Truy cập DOM và focus
+   inputRef.current.value="";
   };
 
   return (
