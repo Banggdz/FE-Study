@@ -1,0 +1,294 @@
+view chứa button (UP,DOWN,RESET) Khi người dùng click vào button,gửi acton trong button lên dispatch 
+dispatch lấy action đó truyền vào Reducer,Reducer là hàm xử lí logic
+Sau khi xử lí xong lưu data vào Store và trả về State 
+State gửi lại view để render giao diện và gửi lại vào reducer để lưu vào Store
+---------------------Todos-------------------
+folder action:
+------------------todos.js-------------------
+export const creatTodo=(content)=>{
+    return{
+        type:"CREATE_TODO",
+        content:content
+    };
+}
+export const completedTodo=(id)=>{
+    return{
+        type:"COMPLETED_TODO",
+        id:id
+    };
+}
+export const undoTodo=(id)=>{
+    return{
+        type:"UNDO_TODO",
+        id:id
+    }
+}
+export const deleteTodo=(id)=>{
+    return{
+        type:"DELETE_TODO",
+        id:id
+    };
+}
+folder component
+------------------todos.js-------------------
+folder Todos
+------------------index.js-------------------
+import TodoInput from "./TodoInput";
+import TodoList from "./TodoList";
+
+function Todos(){
+
+    return(
+        <>
+        <div className="todo">
+            <TodoInput/>
+           <TodoList/>
+        </div>
+        
+        </>
+    )
+}
+export default Todos
+------------------TodoInput.js-------------------
+import { useDispatch } from "react-redux"
+import { creatTodo } from "../../action/Todos";
+import { useRef } from "react";
+import './Todos.css'
+function TodoInput(){
+    const dispatch=useDispatch();
+    const inputRef=useRef();
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        if(e.target[0].value!=""){
+            dispatch(creatTodo(e.target[0].value));
+            inputRef.current.value="";
+            inputRef.current.focus();
+        }
+        
+    }
+    return(
+        <>
+            <div className="todo__input">
+                <form onSubmit={handleSubmit}>
+                    <input ref={inputRef}type="content"/>
+                    <button type="submit">+</button>
+                </form>
+            </div>
+        </>
+    )
+}
+export default TodoInput
+------------------TodoList.js--------------------
+import { useDispatch, useSelector } from "react-redux";
+import './Todos.css'
+import { completedTodo, deleteTodo, undoTodo } from "../../action/Todos";
+function TodoList(){
+    const todoList=useSelector(state=>state.todoReducer);
+    const dispatch=useDispatch();
+    const handleCompleted=(id)=>{
+        dispatch(completedTodo(id));
+        // console.log(id);
+    }
+    const handleUndo=(id)=>{
+        dispatch(undoTodo(id))
+    }
+    // console.log(todoList)
+    return(
+        <>
+        {todoList&&(
+            <ul className="todo__list">
+                {todoList.map((item)=>(
+                    <li className="todo__item" key={item.id}>
+                        <span className={
+                            "todo__content " +(item.completed && "todo__content--completed")
+                            } 
+                        >{item.content}
+                        </span>
+                        <span className="todo__button">
+                        {item.completed?(
+                            
+                            <button onClick={()=>handleUndo(item.id)}>U</button>
+                            ):(
+                            <button onClick={()=>handleCompleted(item.id)}>V</button>
+                            )}
+                        <button onClick={()=> dispatch(deleteTodo(item.id))}>X</button>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+
+        )}
+        </>
+    )
+}
+export default TodoList;
+--------------------Todos.css--------------------
+/* Tổng thể danh sách */
+.todo__list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  background-color: #fff3cd;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mỗi item */
+.todo__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Nội dung công việc */
+.todo__content {
+  color: #333;
+}
+
+/* Gạch ngang khi completed */
+.todo__content--completed {
+  text-decoration: line-through;
+  text-decoration-color: #ff9800;
+  color: #888;
+}
+
+/* Nhóm nút */
+.todo__button {
+  display: flex;
+  gap: 6px;
+}
+
+/* Nút thao tác (V, X, U) */
+.todo__button button {
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.todo__button button:hover {
+  background-color: #fb8c00;
+}
+
+/* Input form */
+.todo__input {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Form chứa input và nút */
+.todo__input form {
+  display: flex;
+  gap: 10px;
+}
+
+/* Ô nhập */
+.todo__input input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Nút + */
+.todo__input button {
+  background-color: #f59e0b;
+  border: none;
+  color: white;
+  padding: 0 14px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.todo__input button:hover {
+  background-color: #d97706;
+}
+folder reducers:
+-------------------index.js----------------
+import counterReducer from "./counter";
+import { combineReducers } from "redux";
+import todoReducer from "./todos";
+
+const allReducers=combineReducers({
+     counterReducer,
+     todoReducer,
+    //thêm nhiều reducer ở đây
+});
+export default allReducers;
+
+------------todos.js-------------
+const init = [
+  {
+    id: 1,
+    content: "Công việc 1",
+    completed: true
+  },
+  {
+    id: 2,
+    content: "Công việc 2",
+    completed: false
+  },
+  {
+    id: 3,
+    content: "Công việc 3",
+    completed: false
+  }
+];
+const todoReducer=(state=init,action)=>{
+    let newState=[...state]; 
+    // console.log(state,action);
+    
+    switch (action.type) {
+      case "CREATE_TODO":
+        newState=[
+          ...newState,
+          {
+            id:Date.now(),
+            content:action.content,
+            completed:false
+          }
+        ]
+        return newState;
+        case "COMPLETED_TODO":
+        const index=newState.findIndex(item=>{
+          return item.id===action.id;
+        });
+        newState[index].completed=true;
+        console.log(index,newState[index])
+        return newState;
+        case "UNDO_TODO":
+          const indexUndo=newState.findIndex(item=>{
+            return item.id===action.id;
+          });
+         newState[indexUndo].completed=false;
+         return newState; 
+        case "DELETE_TODO":
+          newState=newState.filter((item)=>item.id!=action.id);
+          return newState
+      default:
+        return state;
+    }
+   
+}
+export default todoReducer;
