@@ -1,0 +1,193 @@
+--------------------------Tabs--------------------------
+import { useEffect ,useState} from 'react'
+import './Tabs.scss'
+function Tabs(){
+*/.tabs{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top:10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    &__item{
+        margin-right:30px;
+        font-weight:600;
+    }
+}*/
+    const [data,setData]=useState([]);
+    const [tabActive,setTabActive]=useState("products");
+    useEffect(()=>{
+        fetch(`https://dummyjson.com/${tabActive}`)
+        .then(res=>res.json())
+        .then(data=>{
+            setData(data[tabActive]);
+        })
+    },[tabActive])
+    const handleChangeTab=(e)=>{
+        setTabActive(e);
+    }
+    console.log(data);
+    return(
+        <>
+        <div className="tabs"style={{display:"flex"}}>
+            <div className="tabs__item"onClick={()=>handleChangeTab("products")}>
+                Products
+            </div> 
+            <div className="tabs__item"onClick={()=>handleChangeTab("users")}>
+                Users
+            </div>
+            <div className="tabs__item"onClick={()=>handleChangeTab("posts")}>
+                Posts
+            </div>
+        </div>
+        <div className="tabs__content">
+            <ul>
+                {data.map((item)=>{
+                    return<li key={item.id}>{item.title||`${item.firstName} ${item.lastName}`}</li>
+                })}    
+            </ul>
+        </div>
+        </>
+    )
+}
+export default Tabs
+--------------------------UseEffect2--------------------------
+.product{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 40%;
+        margin: 1% 1% 30px 1%;
+        border: 1px solid #ddd;
+    }
+    &__image{
+        width: 100%;
+        aspect-ratio: 4/3;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size:10px;
+    }
+    &__price{
+        font-weight: 700;
+        color:yellow;
+    }
+}
+import { useEffect ,useState} from "react";
+import './Product.scss'
+function UseEffect2(){
+    const[data,setData]=useState([]);
+    useEffect(()=>{
+        fetch("https://dummyjson.com/products")
+        .then(res=>res.json())
+        .then(data=>{
+            setData(data.products);
+        })
+    },[]);
+    console.log(data);
+    return(
+        <>
+        <div className="product__list">
+            {data.map(item=>(
+                <div className="product__item"key={item.id}>
+                    <div className="product__image">
+                        <img src={item.images}></img>
+                        </div>
+                        <h3 className="product_title">
+                            {item.title}
+                        </h3>
+                        <div className="product__price">
+                            {item.price}$;
+                            </div>
+                    </div>
+            ))}
+        </div>
+        </>
+    )
+}
+export default UseEffect2
+--------------------------UseEffect3--------------------------
+.product{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 40%;
+        margin: 1% 1% 30px 1%;
+        border: 1px solid #ddd;
+    }
+    &__image{
+        width: 100%;
+        aspect-ratio: 4/3;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size:10px;
+    }
+    &__price{
+        font-weight: 700;
+        collor:yellow;
+    }
+}
+import { useEffect ,useState} from "react";
+import './Product.scss'
+function UseEffect3(){
+    const limit=10;
+    const[data,setData]=useState([]);
+    const [pageActive,setPageActive]=useState(0);
+    const [quantityPage,setQuantityPage]=useState(0);
+    useEffect(()=>{
+        fetch(`https://dummyjson.com/products?skip=${pageActive*limit}&limit=${limit}`)
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            setData(data.products);
+            setQuantityPage((Math.ceil(data.total/limit)));
+        })
+    },[pageActive]);
+    const handleClickPage=(e)=>{
+        setPageActive(e);
+    }
+    console.log(quantityPage);
+    console.log(Array(quantityPage));console.log(...Array(quantityPage));
+    return(
+        <>
+        <div className="product__list">
+            {data.map(item=>(
+                <div className="product__item"key={item.id}>
+                    <div className="product__image">
+                        <img src={item.images}></img>
+                        </div>
+                        <h3 className="product_title">
+                            {item.title}
+                        </h3>
+                        <div className="product__price">
+                            {item.price}$
+                            </div>
+                    </div>
+            ))}
+        </div>
+        <ul className="pagination">
+            {/* <li onClick={()=>{handleClickPage(0)}}>1</li>
+            <li onClick={()=>{handleClickPage(1)}}>2</li>
+            <li onClick={()=>{handleClickPage(2)}}>3</li> */}
+            {[...Array(quantityPage)].map((_,index)=>(
+                <li key={index} onClick={()=>handleClickPage(index)}>{index+1}</li>
+            ))}
+        </ul>
+        </>
+    )
+}
+export default UseEffect3
