@@ -1,3 +1,20 @@
+useState giúp cập nhật lại trạng thái của dữ liệu (hay cập nhật lại giá trị của dữ liệu).
+Khi dữ liệu thay đổi thì giao diện được cập nhật lại theo dữ liệu mới.
+Cú pháp:
+import { useState } from "react";
+function Component() {
+	const [state, setState] = useState(initialStateValue);
+	// Code
+}
+export default Component;
+Trong đó:
+state: là tên biến của state.
+setState: là một function dùng để cập nhật state.
+initialStateValue: là giá trị khởi tạo (ban đầu) của state, chỉ dùng 1 lần.
+Ví dụ 1: Bóng đèn có 2 trạng thái là bật hoặc tắt.
+Ví dụ 2: Khi tăng số lượng sản phẩm thì tổng tiền được cập nhật lại.
+Ví dụ 3: Tạo gợi ý Search giống của Youtube sử dụng onChange và fake data.
+
 --------CounterState---------
 import { useState } from "react"
 
