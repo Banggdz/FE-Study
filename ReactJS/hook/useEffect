@@ -1,3 +1,11 @@
+useEffect dùng để xử lý logic nào đó khi data (dữ liệu) được thay đổi.
+Component sau khi được render ra giao diện lần đầu, thì sẽ gọi tới hàm callback của useEffect (vì chúng ta ưu tiên việc render ra giao diện trước, xử lý logic sau nên callback của useEffect sẽ chạy sau khi component được render ra).
+Cú pháp:
+	useEffect(callback, [dependency]);
+Trong đó:
+callback: làm hàm gọi lại, bắt buộc phải có.
+dependency: là một biến. Không bắt buộc phải có.
+Khi render lại giao diện (tức render lần 2 trở đi), thì callback của useEffect vẫn được gọi lại
 --------------------------Tabs--------------------------
 import { useEffect ,useState} from 'react'
 import './Tabs.scss'
