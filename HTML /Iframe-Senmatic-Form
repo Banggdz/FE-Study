@@ -81,7 +81,13 @@ Giá trị của thuộc tính for phải trùng với giá trị của thuộc 
         <input type="checkbox"id="php" name="language" value="php">
         <label for="php">Ngôn ngữ Php</label><br><br>
 //Chọn 1 đáp án
+- <label> có chức năng đặc biệt: khi người dùng click vào phần chữ, nó sẽ kích hoạt input tương ứng (checkbox, radio, v.v.).
+- <div> không có chức năng này, nên nếu bạn bỏ <label>, người dùng sẽ phải click chính xác vào ô tick 
+- Ngoài ra, <label> còn giúp trình đọc màn hình hiểu rõ nội dung, rất quan trọng cho accessibility.
+
+<label>
 <input type="radio"id="java" name="language" value="j">
+</label>
 // Thanh kéo điều chỉnh giá trị
  <input type="range" name="volume" min="0"max="100"step="5">
 
