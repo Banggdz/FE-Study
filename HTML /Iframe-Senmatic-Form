@@ -84,7 +84,7 @@ Giá trị của thuộc tính for phải trùng với giá trị của thuộc 
 - <label> có chức năng đặc biệt: khi người dùng click vào phần chữ, nó sẽ kích hoạt input tương ứng (checkbox, radio, v.v.).
 - <div> không có chức năng này, nên nếu bạn bỏ <label>, người dùng sẽ phải click chính xác vào ô tick 
 - Ngoài ra, <label> còn giúp trình đọc màn hình hiểu rõ nội dung, rất quan trọng cho accessibility.
-
+-Chỉ được chọn 1 đáp án trong các thẻ có name giống nhau,, xóa name có thể chọn được nhiều đáp án
 <label>
 <input type="radio"id="java" name="language" value="j">
 </label>
