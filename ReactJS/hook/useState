@@ -15,6 +15,16 @@ Ví dụ 1: Bóng đèn có 2 trạng thái là bật hoặc tắt.
 Ví dụ 2: Khi tăng số lượng sản phẩm thì tổng tiền được cập nhật lại.
 Ví dụ 3: Tạo gợi ý Search giống của Youtube sử dụng onChange và fake data.
 
+Khi bạn gọi:
+setScore(3);
+React sẽ đánh dấu: "Component này cần re-render"
+Nhưng React chưa thực hiện ngay lập tức
+Nó đợi đến khi hàm hiện tại chạy xong, rồi mới thực hiện re-render toàn bộ component
+
+🧠 Vì sao vậy?
+React hoạt động theo cơ chế batching updates — gom các setState lại rồi render 1 lần để tối ưu hiệu suất.
+
+
 --------CounterState---------
 import { useState } from "react"
 
