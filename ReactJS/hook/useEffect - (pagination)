@@ -156,6 +156,7 @@ function UseEffect3(){
     const[data,setData]=useState([]);
     const [pageActive,setPageActive]=useState(0);
     const [quantityPage,setQuantityPage]=useState(0);
+//https://dummyjson.com/products?skip=5&limit=5
     useEffect(()=>{
         fetch(`https://dummyjson.com/products?skip=${pageActive*limit}&limit=${limit}`)
         .then(res=>res.json())
