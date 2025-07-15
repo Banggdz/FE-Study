@@ -1,0 +1,16 @@
+src/pages/FindProduct/index.js
+
+| Cú pháp                | Bạn đang đứng ở đâu sau khi thoát?               |
+| ---------------------- | ------------------------------------------------ |
+| `.`                    | `src/pages/FindProduct` (chính thư mục hiện tại) |
+| `..`                   | `src/pages` (**thoát ra khỏi FindProduct**)      |
+| `../..`                | `src` (**thoát ra khỏi pages**)                  |
+| `../../components/...` | đi vào thư mục `components` nằm trong `src`      |
+
+Nếu bạn đang ở trong phòng "FindProduct", thì:
+
+. → ở trong phòng đó
+
+.. → đi ra hành lang "pages"
+
+../.. → ra ngoài tòa nhà "src"
