@@ -28,7 +28,35 @@ const handleSortBy = (e) => {
     const handleSortOrder = (e) => {
         navigate(`/?sortBy=${sortBy}&order=${e.target.value}`);
     }
+  const handleSortBy = (e) => {
+    const newSort = e.target.value;
+    const nextOrder = order === "default" ? "asc" : order; // nếu chưa chọn thứ tự thì dùng asc
+    navigate(buildURL({ sortBy: newSort, order: nextOrder, page: 0 }));
+  };
 
+  const handleSortOrder = (e) => {
+    const newOrder = e.target.value;
+    const field = sortBy === "default" ? "price" : sortBy;
+    navigate(buildURL({ sortBy: field, order: newOrder, page: 0 }));
+  };
+
+  useEffect(() => {
+        setLoading(true)
+        let url = `https://dummyjson.com/products?limit=${limit}&skip=${pageActive * limit}`
+        if (sortBy != "default" && order != "default") {
+            url = `https://dummyjson.com/products?limit=${limit}&skip=${pageActive * limit}&sortBy=${sortBy}&order=${order}`
+        }
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data.products || []);
+                setPageQuantity(Math.ceil((data.total || 0) / limit))
+            })
+            .finally(()=>{
+              setLoading(false)
+            })
+    }, [pageActive, sortBy, order]);
+    
 <div className="product__sort">
                 <h3>Sắp xếp theo</h3>
                 <select onChange={handleSortBy}>
