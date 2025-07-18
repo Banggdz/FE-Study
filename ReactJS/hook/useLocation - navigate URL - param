@@ -1,0 +1,44 @@
+const navigate = useNavigate();
+const location = useLocation();
+const getParams = () => {
+        const params = new URLSearchParams(location.search)
+        return {
+            sortBy: params.get("sortBy") || "default",
+            order: params.get("order") || "default",
+            page: parseInt(params.get("page")) || 0,
+        };
+    };
+const { sortBy, order, page } = getParams();
+
+
+const buildUrl=(next={})=>{
+        const p=new URLSearchParams(location.search);
+        Object.entries(next).forEach(([k,v])=>{
+            if(v === undefined || v === null || v === "" || v === "default"){
+                p.delete(k);
+            }
+            else p.set(k,v);
+        });
+        return "/?"+p.toString
+    }
+const handleSortBy = (e) => {
+        console.log(e.target.value);
+        navigate(`/?sortBy=${e.target.value}&order=${order}`)
+    }
+    const handleSortOrder = (e) => {
+        navigate(`/?sortBy=${sortBy}&order=${e.target.value}`);
+    }
+
+<div className="product__sort">
+                <h3>Sắp xếp theo</h3>
+                <select onChange={handleSortBy}>
+                    <option value="default">Mặc định</option>
+                    <option value="price">Giá</option>
+                    <option value="discountPercentage">Gỉảm giá</option>
+                </select>
+                <select onChange={handleSortOrder}>
+                    <option value="default">Mặc định</option>
+                    <option value="asc">Tăng dần</option>
+                    <option value="desc">Giảm dần</option>
+                </select>
+            </div>
