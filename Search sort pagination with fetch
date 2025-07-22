@@ -1,5 +1,5 @@
 http://localhost:3001/users?email=dothib@gmail.com&fullName=Do%20Thi%20B
-
+(ko áp dụng cho api dummyjson)
 [
   {
     "id": "2",
@@ -15,3 +15,11 @@ http://localhost:3001/users?email=dothib@gmail.com&fullName=Do%20Thi%20B
     "id": "8efb"
   }
 ]
+Tìm kiếm sản phẩm theo từ khóa (ko hỗ trợ tìm kiếm riêng theo title,category mà tìm kiếm chung)
+https://dummyjson.com/products/search?q=oppo
+
+Giới hạn sản phẩm mỗi trang và bỏ qua số sản phẩm
+https://dummyjson.com/products/search?limit=5&skip=20
+
+Sắp xếp
+https://dummyjson.com/products/search?sortBy=price&order=desc
