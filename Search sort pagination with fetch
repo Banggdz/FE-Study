@@ -1,0 +1,17 @@
+http://localhost:3001/users?email=dothib@gmail.com&fullName=Do%20Thi%20B
+
+[
+  {
+    "id": "2",
+    "fullName": "Do Thi B",
+    "email": "dothib@gmail.com",
+    "password": "dothib",
+    "token": "KsZitkpwbbPF3fdjbQWh"
+  },
+  {
+    "id": "c4c1"
+  },
+  {
+    "id": "8efb"
+  }
+]
