@@ -2,6 +2,16 @@ view chứa button (UP,DOWN,RESET) Khi người dùng click vào button,gửi ac
 dispatch lấy action đó truyền vào Reducer,Reducer là hàm xử lí logic
 Sau khi xử lí xong lưu data vào Store và trả về State 
 State gửi lại view để render giao diện và gửi lại vào reducer để lưu vào Store
+
+const count = useSelector(state => state.counter);
+Khi gọi
+dispatch({ type: "INCREMENT" });
+- Nếu state.counter thay đổi, thì count thay đổi
+- React sẽ render lại component sử dụng count
+
+
+
+
 ---------------------Todos-------------------
 folder action:
 ------------------todos.js-------------------
