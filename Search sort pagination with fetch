@@ -1,5 +1,6 @@
+//áp dụng cho api từ localhost
 http://localhost:3001/users?email=dothib@gmail.com&fullName=Do%20Thi%20B
-(áp dụng cho api từ localhost)
+http://localhost:3001/company?_start=3&_limit=5
 [
   {
     "id": "2",
