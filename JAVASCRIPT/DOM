@@ -150,6 +150,48 @@ const list=document.getElementsByClassName("class");
             item.setAttribute("data-category","234");
             item.setAttribute("class","product-test");
         });
+
+CSS Selector là gì?
+Là cách để chỉ định phần tử trong HTML mà bạn muốn tác động đến — bằng CSS hoặc JavaScript.
+<div class="box" id="mainBox">Hello</div>
+document.querySelector('.box');     // Chọn theo class
+document.querySelector('#mainBox'); // Chọn theo id
+Câu hỏi rất hay luôn Nguyễn! 😄 **CSS selector** là một cú pháp dùng để **chọn các phần tử HTML** mà bạn muốn **áp dụng kiểu CSS hoặc thao tác bằng JavaScript**.
+
+---
+
+## 🎯 CSS Selector là gì?
+
+Là cách để chỉ định phần tử trong HTML mà bạn muốn tác động đến — bằng CSS hoặc JavaScript.
+
+### HTML:
+```html
+<div class="box" id="mainBox">Hello</div>
+```
+
+### JavaScript:
+```javascript
+document.querySelector('.box');     // Chọn theo class
+document.querySelector('#mainBox'); // Chọn theo id
+```
+
+---
+
+## 🧩 Các loại CSS selector phổ biến:
+
+| Selector | Ý nghĩa | Ví dụ |
+|----------|--------|-------|
+| `*` | Chọn tất cả | `* { margin: 0; }` |
+| `tag` | Chọn theo tên thẻ | `p { font-size: 16px; }` |
+| `.class` | Chọn theo class | `.title { color: blue; }` |
+| `#id` | Chọn theo id | `#header { background: gray; }` |
+| `[attribute=value]` | Chọn theo thuộc tính | `input[type="text"]` |
+| `parent child` | Chọn phần tử con | `div p` |
+| `element:hover` | Chọn khi hover | `a:hover { color: red; }` |
+| `element:checked` | Chọn khi được chọn | `input:checked` |
+
+
+
 ---------------DOM CSS------------
  <h3 id="h3">Nội dung thẻ h3</h3>
     <script>
