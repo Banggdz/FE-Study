@@ -50,7 +50,37 @@
             item.classList.remove("class");
         });
     </script>
+--HTMLFormControlsCollection--
+<form id="myForm">
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <button type="submit">Gửi</button>
+</form>
 
+<script>
+  const form = document.getElementById("myForm");
+  const elements = form.elements;
+
+  console.log(elements.username.value); // Truy cập input có name="username"
+  console.log(elements[1].name);        // Truy cập phần tử thứ 2 (password)
+</script>
+<form id="myForm">
+  <input type="text" name="username" value="hello">
+</form>
+
+<script>
+  const form = document.getElementById("myForm");
+
+  console.log(form.elements["username"].value); // ✅ "hello"
+  console.log(form.elements.username.value);     // ✅ "hello"
+  console.log(form.elements.name);              // ❌ undefined hoặc không phải input
+
+</script>
+ Có thể dùng form.elements.username thay cho form.elements['username'], nhưng 
+chỉ trong trường hợp name="username" là một định danh hợp lệ trong JavaScript.
+- Không chứa ký tự đặc biệt (-, ....)
+- Không bắt đầu bằng số
+- Không trùng với từ khóa JavaScript (class, default, var, ...)
 ------
 <style>
         .box-1 .box-2 h2 .link{
