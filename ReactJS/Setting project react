@@ -7,6 +7,7 @@ bonus:
 để chạy ở port khác thêm: "start": "set PORT=3001 && react-scripts start", mặc định là 3000
 npm install redux react-redux
 npm install react-router-dom
+npm install antd
 
 ----------Giải thích cấu trúc thư mục và ý nghĩa các file------------
 node_modules: chứa các thư viện được cài đặt cho dự án, tất cả cài đặt sẽ được lưu tại đây, chúng ta không thao tác trong thư mục này.
