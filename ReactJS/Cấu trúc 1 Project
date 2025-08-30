@@ -1,0 +1,47 @@
+🔹 Quan hệ giữa pages và components
+
+pages/ = màn hình chính (ứng với route trong app).
+→ Đây là nơi user “ghé thăm” khi nhập URL (/login, /profile, …).
+→ Một page thường ghép nhiều components lại thành giao diện hoàn chỉnh.
+
+components/ = các mảnh nhỏ UI (xây dựng nên pages).
+→ Có thể tái sử dụng ở nhiều pages khác nhau.
+VD:
+pages/
+ ├─ Login.jsx
+ └─ Home.jsx
+
+components/
+ ├─ Navbar.jsx
+ ├─ Footer.jsx
+ ├─ Button.jsx
+ └─ FormInput.jsx
+👉 Trong Login.jsx bạn có thể viết:
+
+import FormInput from "../components/FormInput";
+import Button from "../components/Button";
+export default function Login() {
+  return (
+    <div>
+      <h2>Đăng nhập</h2>
+      <FormInput label="Email" type="email" />
+      <FormInput label="Mật khẩu" type="password" />
+      <Button text="Đăng nhập" />
+    </div>
+  );
+}
+👉 Trong Home.jsx bạn có thể viết:
+
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+export default function Home() {
+  return (
+    <div>
+      <Navbar />
+      <h1>Trang chủ</h1>
+      <Footer />
+    </div>
+  );
+}
+📌 Pages gọi nhiều components để tạo thành 1 giao diện đầy đủ.
+Còn components là những phần nhỏ có thể dùng lại nhiều nơi.
