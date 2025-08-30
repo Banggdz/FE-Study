@@ -45,3 +45,4 @@ export default function Home() {
 }
 📌 Pages gọi nhiều components để tạo thành 1 giao diện đầy đủ.
 Còn components là những phần nhỏ có thể dùng lại nhiều nơi.
+--------
