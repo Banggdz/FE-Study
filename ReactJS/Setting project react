@@ -3,6 +3,10 @@ Bước 2: Gõ lệnh npm install -g create-react-app. Chỉ cần cài 1 lần 
 Bước 3: Gõ lệnh npx create-react-app ten-du-an. Để tạo mới một dự án ReactJS.
 Bước 4: Gõ lệnh cd ten-du-an. Để đi vào thư mục dự án.
 Bước 5: Gõ lệnh npm start. Để khởi chạy dự án.
+bonus:
+thêm: "start": "set PORT=3001 && react-scripts start", để chạy ở port khác, mặc định là 3000
+npm install redux react-redux
+npm install react-router-dom
 
 ----------Giải thích cấu trúc thư mục và ý nghĩa các file------------
 node_modules: chứa các thư viện được cài đặt cho dự án, tất cả cài đặt sẽ được lưu tại đây, chúng ta không thao tác trong thư mục này.
