@@ -1,3 +1,46 @@
+fetch("/api/benhnhan/moi", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+})
+.then(res => {
+    if (res.ok) return res.json();
+    else throw new Error('Lỗi server');
+})
+.then(json => {
+    alert('Thêm bệnh nhân thành công: ' + json.hoTen);
+    form.reset();
+})
+.catch(err => alert(err));
+
+1️⃣ fetch() trả về Promise.
+.then(res => {...}) là first handler:
+Nếu res.ok (HTTP status 2xx) → parse JSON, Promise tiếp theo nhận dữ liệu json.
+Nếu không res.ok → throw new Error('Lỗi server') → bị bắt bởi .catch().
+
+2️⃣.then(json => {...}) là second handler, nhận dữ liệu JSON từ res.json().
+
+.catch(err => alert(err)) là catch tất cả lỗi trong chain:
+
+Nếu fetch() bị lỗi mạng (network error, server down…).
+
+Hoặc nếu bạn throw trong .then() (như throw new Error('Lỗi server')).
+
+3️⃣ err là gì?
+
+err là Error object mà bạn throw hoặc fetch ném ra.
+
+Ví dụ:
+throw new Error('Lỗi server');
+→ .catch(err) nhận object Error:
+
+console.log(err);        // Error: Lỗi server
+console.log(err.message); // "Lỗi server"
+
+Nếu fetch gặp network error, err cũng là TypeError object.
+
+--------
+
 <body>
     <div id="category">
     </div>
