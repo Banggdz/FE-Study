@@ -49,3 +49,6 @@ p.textContent = 'Chờ upload...';
 
 box.append(img, p);
 preview.append(box);
+
+❌ preview.append('<b>Hello</b>');
+- Trình duyệt sẽ hiện nguyên '<b>Hello</b>' chứ ko phải 'Hello'
