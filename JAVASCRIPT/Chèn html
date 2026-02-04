@@ -10,9 +10,8 @@ element.insertAdjacentHTML(position, htmlString);
 Nó chèn HTML string (= chuỗi text) trực tiếp vào DOM tại một vị trí xác định, không phá vỡ DOM hiện tại.
 Đặc điểm
   Nhận string HTML
-  Browser parse HTML → DOM
-  Chèn trực tiếp, nhanh
-  Không tạo node thủ công
+  Browser parse HTML → DOM (<div>, <img>, <input>, …)
+  Chèn vào DOM tại vị trí chỉ định
 
 ❌ CÁCH SAI (hay gặp)
 preview.append(imgHtml); // ❌ chỉ append TEXT
