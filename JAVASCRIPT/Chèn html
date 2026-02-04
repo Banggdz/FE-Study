@@ -1,0 +1,51 @@
+<div>
+    <input type="file" id="imageInput" accept="image/*" multiple onchange="addPreview(this)">
+    <button type="button" onclick="uploadFile()">Thêm ảnh</button>
+    <div id="preview" style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;"></div>
+</div>
+
+1️⃣ insertAdjacentHTML()
+element.insertAdjacentHTML(position, htmlString);
+
+Nó chèn HTML string (= chuỗi text) trực tiếp vào DOM tại một vị trí xác định, không phá vỡ DOM hiện tại.
+Đặc điểm
+  Nhận string HTML
+  Browser parse HTML → DOM
+  Chèn trực tiếp, nhanh
+  Không tạo node thủ công
+
+❌ CÁCH SAI (hay gặp)
+preview.append(imgHtml); // ❌ chỉ append TEXT
+→ nó chèn chuỗi text, không phải HTML
+
+document.getElementById('imageInput').addEventListener('change', function() {
+    const preview = document.getElementById('preview');
+    preview.innerHTML = ''; // Xóa preview cũ
+
+    Array.from(this.files).forEach(file => {
+        const url = URL.createObjectURL(file); // Tạo đường dẫn tạm thời
+        const imgHtml = `
+            <div class="img-box" style="position:relative; border:1px solid #ddd; padding:5px;">
+                <img src="${url}" width="100" height="100" style="object-fit:cover;">
+                <p style="font-size:10px; text-align:center;">Chờ upload...</p>
+            </div>`;
+        preview.insertAdjacentHTML('beforeend', imgHtml);
+    });
+});
+
+2️⃣ append() làm việc với node, nếu truyền !node sẽ chuyển thành text
+const box = document.createElement('div');
+box.className = 'img-box';
+box.style.position = 'relative';
+
+const img = document.createElement('img');
+img.src = url;
+img.width = 100;
+img.height = 100;
+img.style.objectFit = 'cover';
+
+const p = document.createElement('p');
+p.textContent = 'Chờ upload...';
+
+box.append(img, p);
+preview.append(box);
