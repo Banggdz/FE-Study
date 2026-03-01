@@ -1,0 +1,41 @@
+🔧 Bước 1: Cài phiên bản ổn định
+👉 Với react-scripts@5 → dùng Tailwind v3
+npm install -D tailwindcss@3 postcss autoprefixer
+
+🔧 Bước 2: Tạo config
+npx tailwindcss init -p
+
+👉 Sau bước này sẽ tự tạo (nằm cùng cấp src):
+✔ tailwind.config.js:
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+✔ postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+✅ Bước 3: Thêm 
+
+File index.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+✅ Bước 4: Kiểm tra import
+
+File index.js:
+import './index.css';
