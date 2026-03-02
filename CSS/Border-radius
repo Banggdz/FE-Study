@@ -1,0 +1,45 @@
+border-radius: horizontal-radius / vertical-radius;
+
+Trong đó:
+
+horizontal-radius → bán kính theo chiều ngang (horizontal)
+vertical-radius → bán kính theo chiều dọc (vertical)
+
+🎯 Bình thường (không có /)
+
+border-radius: 20px;
+→ 4 góc bo tròn giống nhau (hình tròn ở mỗi góc)
+
+🎯 Khi có dạng A / B
+border-radius: 50% / 10%;
+
+👉 Mỗi góc KHÔNG còn là hình tròn nữa, mà là 1 hình elip (oval)
+
+📌 Cách tưởng tượng:
+Mỗi góc là 1 hình elip:
+
+   ------
+ /        \
+|          |   ← elip (oval)
+ \        /
+   ------
+
+🔥 Ví dụ trực quan
+1. border-radius: 50%
+→ elip = hình tròn → góc tròn đều
+
+2. border-radius: 50% / 10%
+→ elip bị ép dẹt lại theo chiều dọc
+
+   ____________
+ /              \
+|                |
+ \______________/
+
+👉 Nghĩa là:
+
+Ngang: cong nhiều (50%)
+Dọc: cong ít (10%)
+
+=> nhìn giống mặt cong nhẹ của màn hình rạp
+10% → độ cao của elip (dọc)
